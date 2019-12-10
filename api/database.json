@@ -1,0 +1,40 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Christian Pippin",
+      "email": "ianpippin@gmail.com",
+      "password": "jippin"
+    },
+    {
+      "id": 2,
+      "name": "Corri Golden",
+      "email": "corrigolden@gmail.com",
+      "password": "colden"
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "name": "some name",
+      "body": "some poem",
+      "userId": 1,
+      "entryTypeId": 1,
+      "privacy": "private"
+    }
+  ],
+  "entryTypes": [
+    {
+      "id": 1,
+      "name": "poem"
+    }
+  ],
+  "friends": [
+    {
+      "id": 1,
+      "name": "Corri Golden",
+      "userId": 2,
+      "loggedInUserId": 1
+    }
+  ]
+}
