@@ -34,9 +34,15 @@ export default class ApplicationViews extends Component {
                 />
 
                 <Route
-                path="/mypost" render={props => {
-                    return <PostList {...props} />
-                }}
+                    exact path="/mypost" render={props => {
+                        return <PostList {...props} />
+                    }}
+                />
+
+                <Route
+                    path="/mypost/new" render={props => {
+                        return <PostForm {...props} />
+                    }}
                 />
 
                 <Route exact path="/posts" render={props => {
