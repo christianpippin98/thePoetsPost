@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import PostCard from "./PostCard"
 import PostManager from "../../Modules/PostManager"
+import { Button } from 'reactstrap';
 
 class PostList extends Component {
     state = {
@@ -33,9 +34,7 @@ class PostList extends Component {
     render() {
         return (
             <>
-                <section className="section-content">
-                    <button type="button" className="btn" onClick={() => { this.props.history.push("/posts/new") }}>Add New Task</button>
-                </section>
+            <Button color="secondary" size="sm" onClick={() => { this.props.history.push("/mypost/new") }}>New Post</Button>
                 <div className="container-cards">
                     {this.state.posts.map(post =>
                         <PostCard

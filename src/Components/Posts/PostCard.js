@@ -37,7 +37,6 @@ class PostCard extends Component {
         return (
             <div className="card">
                 <div className="card-body">
-                    <input type="checkbox" onChange={this.handleFieldChange} onClick={() => { this.updateStatus(this.props.post.id)}}></input>
                     <h5 onClick={() => { this.props.history.push(`/posts/${this.props.post.id}/edit`) }} className="card-title" style={{ width: "18rem" }}><b>{this.props.post.name}</b></h5>
                     <p>{this.props.post.body}</p>
                     <button type="button" onClick={() => this.props.deletePost(this.props.post.id)}>Delete</button>
