@@ -11,7 +11,7 @@ class PostForm extends Component {
         name: "",
         body: "",
         privacy: "",
-        userId: "",
+        userId: 1,
         entryTypeId: "",
         loadingStatus: false,
     };
