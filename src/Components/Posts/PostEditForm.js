@@ -32,7 +32,7 @@ class PostEditForm extends Component {
     };
 
     PostManager.update(editedPost)
-      .then(() => this.props.history.push("/global"))
+      .then(() => this.props.history.push("/mypost"))
   }
 
   componentDidMount() {

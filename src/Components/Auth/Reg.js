@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import thePoetsPost from "../ThePoetsPost"
+import UsersManager from "../../Modules/UsersManager"
 
 
 class Reg extends Component {
@@ -18,36 +19,41 @@ class Reg extends Component {
     stateToChange[evt.target.id] = evt.target.value
     this.setState(stateToChange)
   }
-//   constructNewUser = evt => {
-//     evt.preventDefault();
-//     if(this.state.email === "" || this.state.password === "" || this.state.confirmPass !== this.state.password) {
-//       window.alert("oh shit");
-//     } else{
-//       this.setState({ loadingStatus: true });
-//       const user = {
-//         email: this.state.email,
-//         password: this.state.password,
+  constructNewUser = evt => {
+    evt.preventDefault();
+    if(this.state.email === "" || this.state.password === "" || this.state.confirmPass !== this.state.password) {
+      window.alert("oh shoot");
+    } else{
+      this.setState({ loadingStatus: true });
+      const user = {
+        email: this.state.email,
+        password: this.state.password,
        
 
-//       };
-//       UsersManager.post(user)
-//       .then(() => this.props.history.push("/global"))
-//     }
-//   }
-
-  handleReg = (e) => {
-    e.preventDefault()
-    this.props.newUser({
-      email: this.state.email,
-      password: this.state.password
-    })
-    this.props.history.push("/global");
-
+      };
+      UsersManager.post(user)
+      .then((user) => {
+        this.props.setUser({
+          email: user.email,
+          password: user.password
+        })
+        console.log(user)
+        this.props.history.push("/mypost")
+      } )
+    }
   }
+
+  // handleReg = (e) => {
+  //   e.preventDefault()
+  //   this.props.newUser({
+  //     email: this.state.email,
+  //     password: this.state.password
+  //   })
+  // }
 
   render() {
     return (
-      <form onSubmit={this.handleReg}>
+      <form>
         <fieldset>
             <h1>Welcome</h1>
           <h3>Please sign in</h3>

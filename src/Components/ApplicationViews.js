@@ -35,7 +35,11 @@ export default class ApplicationViews extends Component {
 
                 <Route
                     exact path="/mypost" render={props => {
-                        return <PostList {...props} />
+                        if (this.isAuthenticated()) {
+                            return <PostList {...props} />
+                        } else {
+                            return <Redirect to="/" />
+                        }
                     }}
                 />
 

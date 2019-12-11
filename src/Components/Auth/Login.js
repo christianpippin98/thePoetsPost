@@ -21,7 +21,7 @@ class Login extends Component {
       email: this.state.email,
       password: this.state.password
     })
-    this.props.history.push("/global");
+    this.props.history.push("/mypost");
 
   }
 
@@ -45,6 +45,7 @@ class Login extends Component {
           <button type="submit">
             Sign in
             </button>
+            <p>Not already a member? <button type="button" onClick={() => { this.props.history.push("/register") }}>Register New Account</button></p>
         </fieldset>
       </form>
     )
