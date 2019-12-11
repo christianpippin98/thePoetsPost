@@ -25,7 +25,7 @@ class PostCard extends Component {
       }
     
       componentDidMount() {
-        PostManager.getPost(this.props.match.params.postId)
+        PostManager.getPost(this.props.match.params.id)
           .then(() => {
             this.setState({
               status: false
