@@ -11,6 +11,31 @@
       "name": "Corri Golden",
       "email": "corrigolden@gmail.com",
       "password": "colden"
+    },
+    {
+      "email": "me@me.com",
+      "password": "1111",
+      "id": 3
+    },
+    {
+      "email": "you@you.com",
+      "password": "2222",
+      "id": 4
+    },
+    {
+      "email": "us@us.com",
+      "password": "3333",
+      "id": 5
+    },
+    {
+      "email": "qq@rr.com",
+      "password": "1111",
+      "id": 6
+    },
+    {
+      "email": "666@666.com",
+      "password": "asdfghjkl",
+      "id": 7
     }
   ],
   "posts": [

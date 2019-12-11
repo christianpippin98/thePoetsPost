@@ -40,7 +40,7 @@ class PostForm extends Component {
 
             // Create the animal and redirect user to animal list
             PostManager.post(post)
-                .then(() => this.props.history.push("/global"));
+                .then(() => this.props.history.push("/mypost"));
         }
     };
 
