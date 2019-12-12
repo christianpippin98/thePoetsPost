@@ -41,16 +41,29 @@
       "email": "christianpippin98@gmail.com",
       "password": "55555",
       "id": 8
+    },
+    {
+      "email": "ssss@gggg.com",
+      "password": "11111",
+      "id": 9
     }
   ],
   "posts": [
     {
       "id": 5,
-      "name": "zxcvbnmmmmmmmmmm",
+      "name": "ddddddddddd",
       "body": "zxcvbnm,mnbvc",
       "userId": 1,
-      "entryTypeId": 3,
+      "entryTypeId": 1,
       "privacy": ""
+    },
+    {
+      "name": "aaaaaaaaa",
+      "body": "ttttttttttttt",
+      "privacy": "",
+      "userId": 1,
+      "entryTypeId": 2,
+      "id": 6
     }
   ],
   "entryTypes": [
