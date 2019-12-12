@@ -1,4 +1,4 @@
-import { Route, withRouter, Redirect } from "react-router-dom";
+import { Route, Redirect } from "react-router-dom";
 import React, { Component } from "react";
 import PostList from "./Posts/PostList";
 import PostForm from "./Posts/PostForm";

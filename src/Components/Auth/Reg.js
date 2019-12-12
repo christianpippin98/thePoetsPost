@@ -1,5 +1,4 @@
 import React, { Component } from "react"
-import thePoetsPost from "../ThePoetsPost"
 import UsersManager from "../../Modules/UsersManager"
 
 
