@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import PostCard from "./PostCard"
+import PromptCard from "../Prompt/PromptCard"
 import PostManager from "../../Modules/PostManager"
 import { Button } from 'reactstrap';
 
