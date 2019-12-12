@@ -31,11 +31,12 @@ class PostForm extends Component {
             window.alert("Try Harder Next Time Scrub");
         } else {
             this.setState({ loadingStatus: true });
+            const currentUser = JSON.parse(localStorage.getItem("credentials"))
             const post = {
                 name: this.state.name,
                 body: this.state.body,
                 privacy: this.state.privacy,
-                userId: this.state.userId,
+                userId: currentUser.id,
                 entryTypeId: Number(this.state.entryTypeId)
             };
 

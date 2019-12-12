@@ -22,11 +22,12 @@ class PostEditForm extends Component {
   updateExistingPost = evt => {
     evt.preventDefault()
     this.setState({ loadingStatus: true });
+    const currentUser = JSON.parse(localStorage.getItem("credentials"))
     const editedPost = {
       id: this.props.match.params.postId,
       name: this.state.name,
       body: this.state.body,
-      userId: this.state.userId,
+      userId: currentUser.id,
       entryTypeId: Number(this.state.entryTypeId),
       privacy: this.state.privacy
     };

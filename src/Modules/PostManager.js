@@ -1,12 +1,12 @@
   
 const remoteURL = "http://localhost:5002"
-
+const userSpecifics = "?userId="
 export default {
   getPost(id) {
     return fetch(`${remoteURL}/posts/${id}`).then(result => result.json())
   },
-  getAllPosts() {
-    return fetch(`${remoteURL}/posts`).then(result => result.json())
+  getAllPosts(id) {
+    return fetch(`${remoteURL}/posts${userSpecifics}${id}`).then(result => result.json())
   },
   delete(id) {
     return fetch(`${remoteURL}/posts/${id}`, {

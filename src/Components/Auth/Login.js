@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import ThePoetsPost from "../ThePoetsPost"
+import UserManager from "../../Modules/UsersManager"
 
 
 class Login extends Component {
@@ -7,7 +8,8 @@ class Login extends Component {
   // Set initial state
   state = {
     email: "",
-    password: ""
+    password: "",
+    id: ""
   }
   // Update state whenever an input field is edited
   handleFieldChange = (evt) => {
@@ -17,12 +19,20 @@ class Login extends Component {
   }
   handleLogin = (e) => {
     e.preventDefault()
-    this.props.setUser({
-      email: this.state.email,
-      password: this.state.password
-    })
-    this.props.history.push("/mypost");
-
+    UserManager.searchUser(this.state.email)
+      .then((existingUser) => {
+        if (existingUser.length === 0) {
+          alert("dagumit")
+        } else {
+          const user = existingUser[0]
+          if (user.password === this.state.password) {
+            this.props.setUser(user)
+            this.props.history.push("/mypost")
+          } else {
+            alert("try again buster")
+          }
+        }
+      })
   }
 
   render() {
@@ -45,7 +55,7 @@ class Login extends Component {
           <button type="submit">
             Sign in
             </button>
-            <p>Not already a member? <button type="button" onClick={() => { this.props.history.push("/register") }}>Register New Account</button></p>
+          <p>Not already a member? <button type="button" onClick={() => { this.props.history.push("/register") }}>Register New Account</button></p>
         </fieldset>
       </form>
     )

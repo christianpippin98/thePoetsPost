@@ -46,6 +46,21 @@
       "email": "ssss@gggg.com",
       "password": "11111",
       "id": 9
+    },
+    {
+      "email": "aaa@llll.com",
+      "password": "22222",
+      "id": 10
+    },
+    {
+      "email": "lauren@riddle.com",
+      "password": "liddle",
+      "id": 11
+    },
+    {
+      "email": "brant@gabriel.com",
+      "password": "00000",
+      "id": 12
     }
   ],
   "posts": [
@@ -64,6 +79,14 @@
       "userId": 1,
       "entryTypeId": 2,
       "id": 6
+    },
+    {
+      "name": "Let Me Be",
+      "body": "zxcvbnm",
+      "privacy": "",
+      "userId": 2,
+      "entryTypeId": 1,
+      "id": 7
     }
   ],
   "entryTypes": [
