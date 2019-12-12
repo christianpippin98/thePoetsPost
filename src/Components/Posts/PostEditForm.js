@@ -8,8 +8,9 @@ class PostEditForm extends Component {
     name: "",
     body: "",
     privacy: "",
-    userId: 1,
+    userId: "",
     entryTypeId: "",
+    entryTypeNames: [],
     loadingStatus: false,
   };
 
@@ -48,6 +49,12 @@ class PostEditForm extends Component {
           loadingStatus: false
         });
       });
+    PostManager.getAllEntryTypes()
+      .then((allEntryTypes) => {
+        this.setState({
+          entryTypeNames: allEntryTypes
+        });
+      });
   }
 
   render() {
@@ -61,12 +68,11 @@ class PostEditForm extends Component {
             <Input type="textarea" onChange={this.handleFieldChange} name="text" id="body" placeholder="Entry Body" value={this.state.body} />
           </FormGroup>
           <FormGroup>
-            <CustomInput type="select" id="entryTypeId" name="customSelect" onChange={this.handleFieldChange} value={this.state.entryTypeId}>
+            <CustomInput type="select" id="entryTypeId" name="customSelect" onChange={this.handleFieldChange} required>
               <option value="">Select Type</option>
-              <option value="1">Poem</option>
-              <option value="2">Short Story</option>
-              <option value="3">Essay</option>
-              <option value="4">Journal</option>
+              {this.state.entryTypeNames.map((name) => {
+                return <option key={name.id} value={name.id}>{name.name}</option>
+              })}
             </CustomInput>
           </FormGroup>
           <FormGroup>

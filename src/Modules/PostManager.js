@@ -31,5 +31,8 @@ export default {
       },
       body: JSON.stringify(editedPost)
     }).then(data => data.json());
+  },
+  getAllEntryTypes() {
+    return fetch(`${remoteURL}/entryTypes`).then(data => data.json());
   }
 }
