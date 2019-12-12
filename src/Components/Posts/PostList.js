@@ -11,7 +11,8 @@ class PostList extends Component {
 
 
     componentDidMount() {
-        PostManager.getAllPosts()
+        const currentUser = JSON.parse(localStorage.getItem("credentials"))
+        PostManager.getAllPosts(currentUser.id)
             .then((posts) => {
                 this.setState({
                     posts: posts

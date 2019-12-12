@@ -4,8 +4,8 @@ import ApplicationViews from "./ApplicationViews";
 import Login from "./Auth/Login";
 
 
-localStorage.setItem("currentUser", 1)
-let i = localStorage.getItem("currentUser", 1)
+// localStorage.setItem("currentUser", 1)
+// let i = localStorage.getItem("currentUser", 1)
 
 class ThePoetsPost extends Component {
 
