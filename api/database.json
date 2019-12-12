@@ -36,6 +36,11 @@
       "email": "666@666.com",
       "password": "asdfghjkl",
       "id": 7
+    },
+    {
+      "email": "christianpippin98@gmail.com",
+      "password": "55555",
+      "id": 8
     }
   ],
   "posts": [
@@ -44,7 +49,7 @@
       "name": "zxcvbnmmmmmmmmmm",
       "body": "zxcvbnm,mnbvc",
       "userId": 1,
-      "entryTypeId": 2,
+      "entryTypeId": 3,
       "privacy": ""
     }
   ],
