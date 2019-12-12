@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 // import { Link } from "react-router-dom";
 import PostManager from "../../Modules/PostManager";
+import PromptCard from "../Prompt/PromptCard"
 import { CustomInput, Form, FormGroup, Label, Button, Input } from 'reactstrap';
 
 
@@ -48,6 +49,7 @@ class PostForm extends Component {
     render() {
         return (
             <>
+            <PromptCard/>
             <Form>
                 <FormGroup>
                     <Input type="text" onChange={this.handleFieldChange} name="text" id="name" placeholder="Entry Name" required />
