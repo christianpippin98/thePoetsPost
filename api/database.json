@@ -37,6 +37,14 @@
       "userId": 2,
       "entryTypeId": 1,
       "id": 7
+    },
+    {
+      "id": 8,
+      "name": "Let Me Be",
+      "body": "A scrawny high school student who is zestfully feeling threatened by a sick werewolf",
+      "userId": 1,
+      "entryTypeId": 2,
+      "privacy": ""
     }
   ],
   "entryTypes": [
