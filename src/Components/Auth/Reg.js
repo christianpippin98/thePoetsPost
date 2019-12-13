@@ -18,6 +18,10 @@ class Reg extends Component {
     stateToChange[evt.target.id] = evt.target.value
     this.setState(stateToChange)
   }
+
+  // If/Else conditional to check input data and run it against existing user data. 
+  // If the user info already exists, the user will get an error message.
+  // If the info does not exist, the user will be added to the user database and they will be logged into their personal Post.
   constructNewUser = evt => {
     evt.preventDefault();
     if (this.state.email === "" || this.state.password === "" || this.state.confirmPass !== this.state.password) {
@@ -50,14 +54,8 @@ class Reg extends Component {
     }
   }
 
-  // handleReg = (e) => {
-  //   e.preventDefault()
-  //   this.props.newUser({
-  //     email: this.state.email,
-  //     password: this.state.password
-  //   })
-  // }
 
+// Register form to collect user data and use the above functions to create a new user.
   render() {
     return (
       <form>
