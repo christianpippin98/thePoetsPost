@@ -10,12 +10,16 @@ class Login extends Component {
     password: "",
     id: ""
   }
+
   // Update state whenever an input field is edited
   handleFieldChange = (evt) => {
     const stateToChange = {}
     stateToChange[evt.target.id] = evt.target.value
     this.setState(stateToChange)
   }
+
+// If/Else conditional that, when called takes login credentials and checks them against the database. If the form is not filled out, 
+// or if the information given doesn't match any accounts, user will get an error message.
   handleLogin = (e) => {
     e.preventDefault()
     UserManager.searchUser(this.state.email)
@@ -34,6 +38,8 @@ class Login extends Component {
       })
   }
 
+
+  // Login form to call above functions and take user info. If the user doesn't have an account, they can redirect to the register form.
   render() {
     return (
       <form onSubmit={this.handleLogin}>

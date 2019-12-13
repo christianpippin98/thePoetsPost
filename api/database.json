@@ -11,32 +11,34 @@
       "name": "Corri Golden",
       "email": "corrigolden@gmail.com",
       "password": "colden"
+    },
+    {
+      "email": "jisie@david.com",
+      "password": "jdavid",
+      "id": 3
+    },
+    {
+      "email": "asdfghjkl@asdfghjkl.com",
+      "password": "00000",
+      "id": 4
     }
   ],
   "posts": [
     {
       "id": 5,
-      "name": "ddddddddddd",
+      "name": "dddddddd",
       "body": "zxcvbnm,mnbvc",
       "userId": 1,
-      "entryTypeId": 1,
-      "privacy": ""
-    },
-    {
-      "name": "aaaaaaaaa",
-      "body": "ttttttttttttt",
-      "privacy": "",
-      "userId": 1,
       "entryTypeId": 2,
-      "id": 6
+      "privacySettingId": ""
     },
     {
+      "id": 7,
       "name": "Let Me Be",
-      "body": "zxcvbnm",
-      "privacy": "",
+      "body": "poem body",
       "userId": 2,
       "entryTypeId": 1,
-      "id": 7
+      "privacySettingId": ""
     },
     {
       "id": 8,
@@ -44,7 +46,37 @@
       "body": "A scrawny high school student who is zestfully feeling threatened by a sick werewolf",
       "userId": 1,
       "entryTypeId": 2,
-      "privacy": ""
+      "privacySettingId": ""
+    },
+    {
+      "name": "zxcvbn",
+      "body": "asdfghjk",
+      "privacySettingId": "",
+      "userId": 1,
+      "entryTypeId": 1,
+      "id": 9
+    },
+    {
+      "id": 10,
+      "name": "A cross-dresser and a hobbit who is losing a hotdog-eating contest.",
+      "body": "fsjhbbkwhjbejkjhbckjb",
+      "userId": 2,
+      "entryTypeId": 1,
+      "privacySettingId": ""
+    }
+  ],
+  "privacySetting": [
+    {
+      "id": 1,
+      "privacy": "global"
+    },
+    {
+      "id": 2,
+      "privacy": "local"
+    },
+    {
+      "id": 3,
+      "privacy": "personal"
     }
   ],
   "entryTypes": [
