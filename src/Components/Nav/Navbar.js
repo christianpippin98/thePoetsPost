@@ -10,10 +10,10 @@ class NavBar extends Component {
             <nav className="navbar bg-dark text-white flex-md-nowrap p-0 shadow">
                 <ul className="nav nav-pills nav-fill">
                     <li className="nav-item">
-                        <Link className="nav-link" to="/mypost">Poet's Post</Link>
+                        <Link className="nav-link" to="/globalpost">Poet's Post</Link>
                     </li>                    
                     <li className="nav-item">
-                        <Link className="nav-link" to="/local">Local Post</Link>
+                        <Link className="nav-link" to="/localpost">Local Post</Link>
                     </li>
                     <li className="nav-item">
                         <Link className="nav-link" to="/mypost">My Post</Link>

@@ -2,25 +2,24 @@
   "users": [
     {
       "id": 1,
-      "name": "Christian Pippin",
+      "firstName": "Christian",
+      "lastName": "Pippin",
       "email": "ianpippin@gmail.com",
       "password": "jippin"
     },
     {
       "id": 2,
-      "name": "Corri Golden",
+      "firstName": "Corri",
+      "lastName": "Golden",
       "email": "corrigolden@gmail.com",
       "password": "colden"
     },
     {
-      "email": "jisie@david.com",
+      "email": "jisiedavid@gmail.com",
+      "firstName": "Jisie",
+      "lastName": "David",
       "password": "jdavid",
       "id": 3
-    },
-    {
-      "email": "asdfghjkl@asdfghjkl.com",
-      "password": "00000",
-      "id": 4
     }
   ],
   "posts": [
@@ -49,23 +48,55 @@
       "privacySettingId": ""
     },
     {
-      "name": "zxcvbn",
-      "body": "asdfghjk",
-      "privacySettingId": "",
-      "userId": 1,
-      "entryTypeId": 1,
-      "id": 9
-    },
-    {
       "id": 10,
       "name": "A cross-dresser and a hobbit who is losing a hotdog-eating contest.",
       "body": "fsjhbbkwhjbejkjhbckjb",
       "userId": 2,
       "entryTypeId": 1,
       "privacySettingId": ""
+    },
+    {
+      "name": "To Infinity and Beyond",
+      "body": "A spaceship captain who is suspiciously disguised in a galaxy far, far away.",
+      "privacy": "",
+      "userId": 1,
+      "entryTypeId": 2,
+      "id": 11
+    },
+    {
+      "id": 12,
+      "name": "asdfghjklkjhgfds",
+      "body": "asefghjkjhgfdsasdv",
+      "userId": 1,
+      "entryTypeId": 1,
+      "privacy": ""
+    },
+    {
+      "id": 13,
+      "name": "Let Me Be",
+      "body": "hmmm",
+      "userId": 1,
+      "entryTypeId": 1,
+      "privacy": ""
+    },
+    {
+      "id": 14,
+      "name": "Let Me Be",
+      "body": "zzzzzzz",
+      "userId": 1,
+      "entryTypeId": 1,
+      "privacy": ""
+    },
+    {
+      "name": "Let Me Bexxxx",
+      "body": "xxxxxxxxxxxxxx",
+      "privacy": "",
+      "userId": 1,
+      "entryTypeId": 1,
+      "id": 15
     }
   ],
-  "privacySetting": [
+  "privacyTypes": [
     {
       "id": 1,
       "privacy": "global"
@@ -82,25 +113,26 @@
   "entryTypes": [
     {
       "id": 1,
-      "name": "poem"
+      "name": "Poem"
     },
     {
       "id": 2,
-      "name": "short story"
+      "name": "Short story"
     },
     {
       "id": 3,
-      "name": "essay"
+      "name": "Essay"
     },
     {
       "id": 4,
-      "name": "journal"
+      "name": "Journal"
     }
   ],
   "friends": [
     {
       "id": 1,
-      "name": "Corri Golden",
+      "firstName": "Corri",
+      "lastName": "Golden",
       "userId": 2,
       "loggedInUserId": 1
     }

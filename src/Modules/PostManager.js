@@ -34,5 +34,8 @@ export default {
   },
   getAllEntryTypes() {
     return fetch(`${remoteURL}/entryTypes`).then(data => data.json());
+  },
+  getAllPrivacyTypes() {
+    return fetch(`${remoteURL}/privacyTypes`).then(data => data.json());
   }
 }

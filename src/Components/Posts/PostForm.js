@@ -11,7 +11,8 @@ class PostForm extends Component {
     state = {
         name: "",
         body: "",
-        privacy: "",
+        privacyTypeId: "",
+        privacyTypeNames: [],
         userId: "",
         entryTypeId: "",
         entryTypeNames: [],
@@ -36,7 +37,7 @@ class PostForm extends Component {
             const post = {
                 name: this.state.name,
                 body: this.state.body,
-                privacy: this.state.privacy,
+                privacyTypeId: Number(this.state.privacyTypeId),
                 userId: currentUser.id,
                 entryTypeId: Number(this.state.entryTypeId)
             };
@@ -54,8 +55,18 @@ class PostForm extends Component {
             this.setState({
               entryTypeNames: allEntryTypes
             });
+        });
+        PostManager.getAllPrivacyTypes()
+          .then((allPrivacyTypes) => {
+              console.log(allPrivacyTypes)
+            this.setState({
+              privacyTypeNames: allPrivacyTypes
+            });
           });
       }
+
+
+      
 
      
     render() {
@@ -79,11 +90,11 @@ class PostForm extends Component {
                 </FormGroup>
                 <FormGroup>
                     <Label for="exampleCheckbox">Privacy</Label>
-                    <div id="privacy" onChange={this.handleFieldChange} required>
-                        <CustomInput type="radio" onChange={this.handleFieldChange} id="privacy" name="customRadio" label="Global" value="global"/>
-                        <CustomInput type="radio" onChange={this.handleFieldChange} id="privacy" name="customRadio" label="Local" value="local"/>
-                        <CustomInput type="radio" onChange={this.handleFieldChange} id="privacy" name="customRadio" label="Private" value="private"/>
-                    </div>
+                    <FormGroup id="privacyTypeId" onChange={this.handleFieldChange} required>
+                    {this.state.privacyTypeNames.map((name) => {
+                        return <><Label for="privacyButton">{name.privacy}</Label> <CustomInput id="privacyButton" key={name.id} type="radio" value={name.id}></CustomInput></>
+                        })}
+                    </FormGroup>
                 </FormGroup>
                 <Button type="submit" disabled={this.state.loadingStatus} onClick={this.constructNewPost}>Submit</Button>
             </Form>

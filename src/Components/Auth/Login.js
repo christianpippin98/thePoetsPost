@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import UserManager from "../../Modules/UsersManager"
+import { Form, Button, Input, FormGroup } from 'reactstrap';
 
 
 class Login extends Component {
@@ -18,8 +19,8 @@ class Login extends Component {
     this.setState(stateToChange)
   }
 
-// If/Else conditional that, when called takes login credentials and checks them against the database. If the form is not filled out, 
-// or if the information given doesn't match any accounts, user will get an error message.
+  // If/Else conditional that, when called takes login credentials and checks them against the database. If the form is not filled out, 
+  // or if the information given doesn't match any accounts, user will get an error message.
   handleLogin = (e) => {
     e.preventDefault()
     UserManager.searchUser(this.state.email)
@@ -42,27 +43,31 @@ class Login extends Component {
   // Login form to call above functions and take user info. If the user doesn't have an account, they can redirect to the register form.
   render() {
     return (
-      <form onSubmit={this.handleLogin}>
+      <Form onSubmit={this.handleLogin}>
         <fieldset>
-          <h3>Please sign in</h3>
+          <h3>Please Login</h3>
           <div className="formgrid">
-            <input onChange={this.handleFieldChange} type="email"
-              id="email"
-              placeholder="Email address"
-              required="" autoFocus="" />
-            <label htmlFor="inputEmail">Email address</label>
-            <input onChange={this.handleFieldChange} type="password"
-              id="password"
-              placeholder="Password"
-              required="" />
-            <label htmlFor="inputPassword">Password</label>
+
+            <FormGroup>
+              <Input onChange={this.handleFieldChange} type="email"
+                id="email"
+                placeholder="Email address"
+                required="" autoFocus="" />
+            </FormGroup>
+
+            <FormGroup>
+              <Input onChange={this.handleFieldChange} type="password"
+                id="password"
+                placeholder="Password"
+                required="" />
+            </FormGroup>
           </div>
-          <button type="submit">
+          <Button type="submit">
             Sign in
-            </button>
-          <p>Not already a member? <button type="button" onClick={() => { this.props.history.push("/register") }}>Register New Account</button></p>
+            </Button>
+          <p>Not a member yet? <Button type="button" onClick={() => { this.props.history.push("/register") }}>Register New Account</Button></p>
         </fieldset>
-      </form>
+      </Form>
     )
   }
 
