@@ -1,10 +1,11 @@
 import { Route, Redirect } from "react-router-dom";
 import React, { Component } from "react";
-import PostList from "./Posts/PostList";
+import PersonalPostList from "./Posts/PersonalPostList";
 import PostForm from "./Posts/PostForm";
 import PostEditForm from "./Posts/PostEditForm";
 import Login from "./Auth/Login";
 import Reg from "./Auth/Reg"
+import LandingPage from "./Auth/LandingPage"
 
 export default class ApplicationViews extends Component {
 
@@ -17,15 +18,35 @@ export default class ApplicationViews extends Component {
 
                 <Route
                     exact path="/" render={props => {
-                        return <Login setUser={this.props.setUser} {...props} />
+                        if (this.isAuthenticated()) {
+                            return <Redirect to="/mypost" />
+                        } else {
+                            return <LandingPage setUser={this.props.setUser} {...props} />
+                        }
+                    }}
+                />
+
+                <Route
+                    exact path="/login" render={props => {
+                        if (this.isAuthenticated()) {
+                            return <Redirect to="/mypost" />
+                        } else {
+                            return <Login setUser={this.props.setUser} {...props} />
+                        }
                     }}
                 />
 
                 <Route
                     exact path="/register" render={props => {
-                        return <Reg setUser={this.props.setUser} {...props} />
+                        if (this.isAuthenticated()) {
+                            return <Redirect to="/mypost" />
+                        } else {
+                            return <Reg setUser={this.props.setUser} {...props} />
+                        }
                     }}
                 />
+
+
 
                 <Route
                     path="/friends" render={props => {
@@ -36,7 +57,7 @@ export default class ApplicationViews extends Component {
                 <Route
                     exact path="/mypost" render={props => {
                         if (this.isAuthenticated()) {
-                            return <PostList {...props} />
+                            return <PersonalPostList {...props} />
                         } else {
                             return <Redirect to="/" />
                         }
@@ -51,7 +72,7 @@ export default class ApplicationViews extends Component {
 
                 <Route exact path="/posts" render={props => {
                     if (this.isAuthenticated()) {
-                        return <PostList {...props} />
+                        return <PersonalPostList {...props} />
                     } else {
                         return <Redirect to="/" />
                     }

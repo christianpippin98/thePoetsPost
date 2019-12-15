@@ -78,9 +78,9 @@ class PostEditForm extends Component {
           <FormGroup>
             <Label for="exampleCheckbox">Privacy</Label>
             <div id="privacy" onChange={this.handleFieldChange} value={this.state.privacy}>
-              <CustomInput type="radio" onChange={this.handleFieldChange} id="privacy" name="customRadio" label="Global" value="global" />
-              <CustomInput type="radio" onChange={this.handleFieldChange} id="privacy" name="customRadio" label="Local" value="local" />
-              <CustomInput type="radio" onChange={this.handleFieldChange} id="privacy" name="customRadio" label="Private" value="private" />
+              <CustomInput type="radio" name="customRadio" id="privacy1" label="Global" value="1" />
+              <CustomInput type="radio" name="customRadio" id="privacy2" label="Local" value="2" />
+              <CustomInput type="radio" name="customRadio" id="privacy3" label="Private" value="3" />
             </div>
           </FormGroup>
           <Button type="submit" disabled={this.state.loadingStatus} onClick={this.updateExistingPost}>Submit</Button>

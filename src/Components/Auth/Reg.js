@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import UsersManager from "../../Modules/UsersManager"
+import { Form, Button, Input, FormGroup } from 'reactstrap';
 
 
 class Reg extends Component {
@@ -9,6 +10,8 @@ class Reg extends Component {
     email: "",
     password: "",
     confirmPass: "",
+    firstName: "",
+    lastName: "",
     loadingStatus: false
   }
 
@@ -24,7 +27,7 @@ class Reg extends Component {
   // If the info does not exist, the user will be added to the user database and they will be logged into their personal Post.
   constructNewUser = evt => {
     evt.preventDefault();
-    if (this.state.email === "" || this.state.password === "" || this.state.confirmPass !== this.state.password) {
+    if (this.state.email === "" || this.state.password === "" || this.state.confirmPass !== this.state.password || this.state.firstName === "" || this.state.lastName === "") {
       window.alert("oh shoot");
     } else {
       UsersManager.searchUser(this.state.email)
@@ -32,62 +35,78 @@ class Reg extends Component {
           if (existingUser.length === 0) {
 
             this.setState({ loadingStatus: true });
-          const user = {
-            email: this.state.email,
-            password: this.state.password,
-            
-            
-          };
-          UsersManager.post(user)
-          .then((user) => {
-            this.props.setUser(user)
-            console.log(user)
-            this.props.history.push("/mypost")
-            
-          })
-        } else {
-          window.alert("chill bruh, sign in")
-        }
+            const user = {
+              email: this.state.email,
+              password: this.state.password,
+              firstName: this.state.firstName,
+              lastName: this.state.lastName
+
+            };
+            UsersManager.post(user)
+              .then((user) => {
+                this.props.setUser(user)
+                console.log(user)
+                this.props.history.push("/mypost")
+
+              })
+          } else {
+            window.alert("chill bruh, sign in")
+          }
         })
-        
+
 
     }
   }
 
 
-// Register form to collect user data and use the above functions to create a new user.
+  // Register form to collect user data and use the above functions to create a new user.
   render() {
     return (
-      <form>
+      <Form>
         <fieldset>
-          <h1>Welcome</h1>
-          <h3>Please sign in</h3>
+          <h3>Please Register</h3>
+
           <div className="formgrid">
-            <input onChange={this.handleFieldChange} type="email"
-              id="email"
-              placeholder="Email address"
-              required="" autoFocus="" />
-            <label htmlFor="inputEmail"></label>
+            <FormGroup>
+              <Input onChange={this.handleFieldChange} type="email"
+                id="email"
+                placeholder="Email address"
+                required="" autoFocus="" />
+            </FormGroup>
 
-            <input onChange={this.handleFieldChange} type="password"
-              id="password"
-              placeholder="Password"
-              required="" />
-            <label htmlFor="inputPassword"></label>
+            <FormGroup>
+              <Input onChange={this.handleFieldChange} type="password"
+                id="password"
+                placeholder="Password"
+                required="" />
+            </FormGroup>
 
-            <input onChange={this.handleFieldChange} type="password"
-              id="confirmPass"
-              placeholder="Confirm Password"
-              required="" />
-            <label htmlFor="inputPassword"></label>
+            <FormGroup>
+              <Input onChange={this.handleFieldChange} type="password"
+                id="confirmPass"
+                placeholder="Confirm Password"
+                required="" />
+            </FormGroup>
 
+            <FormGroup>
+              <Input onChange={this.handleFieldChange} type="name"
+                id="firstName"
+                placeholder="First Name"
+                required="" />
+            </FormGroup>
 
+            <FormGroup>
+              <Input onChange={this.handleFieldChange} type="name"
+                id="lastName"
+                placeholder="Last Name"
+                required="" />
+            </FormGroup>
           </div>
-          <button type="submit" disabled={this.state.loadingStatus} onClick={this.constructNewUser}>
-            Register
-            </button>
+
+          <Button type="submit" disabled={this.state.loadingStatus} onClick={this.constructNewUser}>Register</Button>
+          <p>Already a member? <Button type="button" onClick={() => { this.props.history.push("/login") }}>Login</Button></p>
         </fieldset>
-      </form>
+      </Form>
     )
   }
 

@@ -37,13 +37,12 @@ class PromptCard extends Component {
 
     render() {
         const {cSelected}=this.state
-        console.log('cSelected',)
         return (
             <div>
                 <Jumbotron fluid>
                     <Container fluid>
                         {this.state.prompt.english ?
-                            <p className="display-3">{this.state.prompt.english}</p> : <h2>loading</h2>
+                            <p>{this.state.prompt.english}</p> : <h2>loading</h2>
                         }
                         <ButtonGroup size="sm">
                             <Button onClick={() => this.onCheckboxBtnClick(0,"adj")} active={cSelected.includes("adj")}>Adjective</Button>

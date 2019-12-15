@@ -3,7 +3,7 @@ import PostCard from "./PostCard"
 import PostManager from "../../Modules/PostManager"
 import { Button } from 'reactstrap';
 
-class PostList extends Component {
+class GlobalPostList extends Component {
     state = {
         posts: [],
     }
@@ -51,4 +51,4 @@ class PostList extends Component {
     }
 }
 
-export default PostList
+export default GlobalPostList
