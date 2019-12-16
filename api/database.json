@@ -24,90 +24,74 @@
   ],
   "posts": [
     {
-      "id": 5,
-      "name": "dddddddd",
-      "body": "zxcvbnm,mnbvc",
+      "name": "My New Post",
+      "body": "New New New New",
+      "privacyTypeId": 1,
       "userId": 1,
       "entryTypeId": 2,
-      "privacySettingId": ""
+      "id": 1
     },
     {
-      "id": 7,
-      "name": "Let Me Be",
-      "body": "poem body",
+      "name": "my newer new",
+      "body": "newer new new new",
+      "privacyTypeId": 3,
       "userId": 2,
-      "entryTypeId": 1,
-      "privacySettingId": ""
+      "entryTypeId": 4,
+      "id": 2
     },
     {
-      "id": 8,
       "name": "Let Me Be",
-      "body": "A scrawny high school student who is zestfully feeling threatened by a sick werewolf",
+      "body": "nnnnnnnn",
+      "privacyTypeId": 3,
       "userId": 1,
       "entryTypeId": 2,
-      "privacySettingId": ""
+      "id": 3
     },
     {
-      "id": 10,
-      "name": "A cross-dresser and a hobbit who is losing a hotdog-eating contest.",
-      "body": "fsjhbbkwhjbejkjhbckjb",
+      "name": "Let Me Be",
+      "body": "mmmmm",
+      "privacyTypeId": 1,
+      "userId": 1,
+      "entryTypeId": 1,
+      "id": 4
+    },
+    {
+      "name": "Let Me Be",
+      "body": "yyyyyyyyy",
+      "privacyTypeId": 1,
+      "userId": 1,
+      "entryTypeId": 1,
+      "id": 5
+    },
+    {
+      "name": "Let Me Be",
+      "body": "ttttttttttttt",
+      "privacyTypeId": 1,
+      "userId": 1,
+      "entryTypeId": 3,
+      "id": 6
+    },
+    {
+      "name": "corri new local",
+      "body": "mmmmmmmmmmmm",
+      "privacyTypeId": 2,
       "userId": 2,
-      "entryTypeId": 1,
-      "privacySettingId": ""
-    },
-    {
-      "name": "To Infinity and Beyond",
-      "body": "A spaceship captain who is suspiciously disguised in a galaxy far, far away.",
-      "privacy": "",
-      "userId": 1,
       "entryTypeId": 2,
-      "id": 11
-    },
-    {
-      "id": 12,
-      "name": "asdfghjklkjhgfds",
-      "body": "asefghjkjhgfdsasdv",
-      "userId": 1,
-      "entryTypeId": 1,
-      "privacy": ""
-    },
-    {
-      "id": 13,
-      "name": "Let Me Be",
-      "body": "hmmm",
-      "userId": 1,
-      "entryTypeId": 1,
-      "privacy": ""
-    },
-    {
-      "id": 14,
-      "name": "Let Me Be",
-      "body": "zzzzzzz",
-      "userId": 1,
-      "entryTypeId": 1,
-      "privacy": ""
-    },
-    {
-      "name": "Let Me Bexxxx",
-      "body": "xxxxxxxxxxxxxx",
-      "privacy": "",
-      "userId": 1,
-      "entryTypeId": 1,
-      "id": 15
+      "id": 8
     }
   ],
   "privacyTypes": [
     {
       "id": 1,
-      "privacy": "global"
+      "privacy": "Global"
     },
     {
       "id": 2,
-      "privacy": "local"
+      "privacy": "Local"
     },
     {
       "id": 3,
-      "privacy": "personal"
+      "privacy": "Personal"
     }
   ],
   "entryTypes": [

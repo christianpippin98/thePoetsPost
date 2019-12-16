@@ -10,8 +10,7 @@ class GlobalPostList extends Component {
 
 
     componentDidMount() {
-        const currentUser = JSON.parse(localStorage.getItem("credentials"))
-        PostManager.getAllPosts(currentUser.id)
+        PostManager.getAllGlobalPosts()
             .then((posts) => {
                 this.setState({
                     posts: posts
@@ -23,7 +22,7 @@ class GlobalPostList extends Component {
     deletePost = id => {
         PostManager.delete(id)
           .then(() => {
-            PostManager.getAllPosts()
+            PostManager.getAllGlobalPosts()
               .then((newPosts) => {
                 this.setState({
                   posts: newPosts
@@ -35,7 +34,7 @@ class GlobalPostList extends Component {
     render() {
         return (
             <>
-            <Button color="secondary" size="sm" onClick={() => { this.props.history.push("/mypost/new") }}>New Post</Button>
+            <Button color="secondary" size="sm" onClick={() => { this.props.history.push("/globalpost/new") }}>New Post</Button>
                 <div className="container-cards">
                     {this.state.posts.map(post =>
                         <PostCard

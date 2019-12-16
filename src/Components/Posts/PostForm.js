@@ -42,62 +42,58 @@ class PostForm extends Component {
                 entryTypeId: Number(this.state.entryTypeId)
             };
 
-            // Create the animal and redirect user to animal list
+            
             PostManager.post(post)
-                .then(() => this.props.history.push("/mypost"));
+                .then(() => this.props.history.go(-1));
         }
     };
 
 
     componentDidMount() {
         PostManager.getAllEntryTypes()
-          .then((allEntryTypes) => {
-            this.setState({
-              entryTypeNames: allEntryTypes
+            .then((allEntryTypes) => {
+                this.setState({
+                    entryTypeNames: allEntryTypes
+                });
             });
-        });
         PostManager.getAllPrivacyTypes()
-          .then((allPrivacyTypes) => {
-              console.log(allPrivacyTypes)
-            this.setState({
-              privacyTypeNames: allPrivacyTypes
+            .then((allPrivacyTypes) => {
+                this.setState({
+                    privacyTypeNames: allPrivacyTypes
+                });
             });
-          });
-      }
+    }
 
 
-      
-
-     
     render() {
         return (
             <>
-            <PromptCard/>
-            <Form>
-                <FormGroup>
-                    <Input type="text" onChange={this.handleFieldChange} name="text" id="name" placeholder="Entry Name" required />
-                </FormGroup>
-                <FormGroup>
-                    <Input type="textarea" onChange={this.handleFieldChange} name="text" id="body" placeholder="Entry Body" required />
-                </FormGroup>
-                <FormGroup>
-                    <CustomInput type="select" id="entryTypeId" name="customSelect" onChange={this.handleFieldChange} required>
-                        <option value="">Select Type</option>
-                        {this.state.entryTypeNames.map((name) => {
-                        return <option key={name.id} value={name.id}>{name.name}</option>
-                        })}
-                    </CustomInput>
-                </FormGroup>
-                <FormGroup>
-                    <Label for="exampleCheckbox">Privacy</Label>
-                    <FormGroup id="privacyTypeId" onChange={this.handleFieldChange} required>
-                    {this.state.privacyTypeNames.map((name) => {
-                        return <><Label for="privacyButton">{name.privacy}</Label> <CustomInput id="privacyButton" key={name.id} type="radio" value={name.id}></CustomInput></>
-                        })}
+                <PromptCard />
+                <Form>
+                    <FormGroup>
+                        <Input type="text" onChange={this.handleFieldChange} name="text" id="name" placeholder="Entry Name" required />
                     </FormGroup>
-                </FormGroup>
-                <Button type="submit" disabled={this.state.loadingStatus} onClick={this.constructNewPost}>Submit</Button>
-            </Form>
+                    <FormGroup>
+                        <Input type="textarea" onChange={this.handleFieldChange} name="text" id="body" placeholder="Entry Body" required />
+                    </FormGroup>
+                    <FormGroup>
+                        <CustomInput type="select" id="entryTypeId" name="customSelect" onChange={this.handleFieldChange} required>
+                            <option value="">Select Type</option>
+                            {this.state.entryTypeNames.map((name) => {
+                                return <option key={name.id} value={name.id}>{name.name}</option>
+                            })}
+                        </CustomInput>
+                    </FormGroup>
+                    <FormGroup>
+                        <CustomInput type="select" id="privacyTypeId" onChange={this.handleFieldChange}>
+                            <option value="">Select Privacy</option>
+                            {this.state.privacyTypeNames.map((name) => {
+                                return <option key={name.id} value={name.id}>{name.privacy}</option>
+                            })}
+                        </CustomInput>
+                    </FormGroup>
+                    <Button type="submit" id="formSubmit" disabled={this.state.loadingStatus} onClick={this.constructNewPost}>Submit</Button>
+                </Form>
             </>
         )
     }
