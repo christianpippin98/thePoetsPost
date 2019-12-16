@@ -42,7 +42,7 @@ class PromptCard extends Component {
                 <Jumbotron fluid>
                     <Container fluid>
                         {this.state.prompt.english ?
-                            <p>{this.state.prompt.english}</p> : <h2>loading</h2>
+                            <p>{this.state.prompt.english}</p> : <><h3>Loading</h3></>
                         }
                         <ButtonGroup size="sm">
                             <Button onClick={() => this.onCheckboxBtnClick(0,"adj")} active={cSelected.includes("adj")}>Adjective</Button>

@@ -6,6 +6,7 @@ import PostEditForm from "./Posts/PostEditForm";
 import Login from "./Auth/Login";
 import Reg from "./Auth/Reg"
 import LandingPage from "./Auth/LandingPage"
+import GlobalPostList from "./Posts/GlobalPostList"
 
 export default class ApplicationViews extends Component {
 
@@ -70,14 +71,19 @@ export default class ApplicationViews extends Component {
                     }}
                 />
 
-                <Route exact path="/posts" render={props => {
+                <Route exact path="/globalpost" render={props => {
                     if (this.isAuthenticated()) {
-                        return <PersonalPostList {...props} />
+                        return <GlobalPostList {...props} />
                     } else {
                         return <Redirect to="/" />
                     }
                 }} />
                 {/* the above code checks session storage and if no user is in session storage, it will not render */}
+                <Route
+                    path="/globalpost/new" render={props => {
+                        return <PostForm {...props} />
+                    }}
+                />
                 <Route
                     path="/posts/:postId(\d+)/edit" render={props => {
                         return <PostEditForm {...props} />

@@ -11,7 +11,7 @@ class PersonalPostList extends Component {
 
     componentDidMount() {
         const currentUser = JSON.parse(localStorage.getItem("credentials"))
-        PostManager.getAllPosts(currentUser.id)
+        PostManager.getAllPersonalPosts(currentUser.id)
             .then((posts) => {
                 this.setState({
                     posts: posts
@@ -23,7 +23,7 @@ class PersonalPostList extends Component {
     deletePost = id => {
         PostManager.delete(id)
           .then(() => {
-            PostManager.getAllPosts()
+            PostManager.getAllPersonalPosts()
               .then((newPosts) => {
                 this.setState({
                   posts: newPosts

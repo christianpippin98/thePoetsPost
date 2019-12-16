@@ -45,7 +45,7 @@ class PostEditForm extends Component {
           body: post.body,
           userId: post.userId,
           entryTypeId: post.entryTypeId,
-          privacy: post.privacy,
+          privacyTypeId: post.privacyTypeId,
           loadingStatus: false
         });
       });
@@ -53,6 +53,12 @@ class PostEditForm extends Component {
       .then((allEntryTypes) => {
         this.setState({
           entryTypeNames: allEntryTypes
+        });
+      });
+      PostManager.getAllPrivacyTypes()
+      .then((allPrivacyTypes) => {
+        this.setState({
+          privacyTypeNames: allPrivacyTypes
         });
       });
   }
@@ -76,12 +82,12 @@ class PostEditForm extends Component {
             </CustomInput>
           </FormGroup>
           <FormGroup>
-            <Label for="exampleCheckbox">Privacy</Label>
-            <div id="privacy" onChange={this.handleFieldChange} value={this.state.privacy}>
-              <CustomInput type="radio" name="customRadio" id="privacy1" label="Global" value="1" />
-              <CustomInput type="radio" name="customRadio" id="privacy2" label="Local" value="2" />
-              <CustomInput type="radio" name="customRadio" id="privacy3" label="Private" value="3" />
-            </div>
+            <CustomInput type="select" id="privacyTypeId" onChange={this.handleFieldChange}>
+              <option value="">Select Privacy</option>
+              {this.state.privacyTypeNames.map((name) => {
+                return <option key={name.id} value={name.id}>{name.privacy}</option>
+              })}
+            </CustomInput>
           </FormGroup>
           <Button type="submit" disabled={this.state.loadingStatus} onClick={this.updateExistingPost}>Submit</Button>
         </Form>
