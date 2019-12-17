@@ -1,5 +1,6 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import PostManager from "../../Modules/PostManager"
+import { Card, Button, CardTitle, CardText } from 'reactstrap'
 
 
 class PostCard extends Component {
@@ -35,18 +36,20 @@ class PostCard extends Component {
   currentUser = JSON.parse(localStorage.getItem("credentials"))
   render() {
     return (
-      <div className="card">
+      <Card className="card">
         <div className="card-body">
-          <h5 className="card-title" style={{ width: "18rem" }}><b>{this.props.post.name}</b></h5>
-          <p>{this.props.post.body}</p>
+          <CardTitle className="card-title" style={{ width: "18rem" }}><b>{this.props.post.name}</b></CardTitle>
+          <CardText>{this.props.post.body}</CardText>
           {(this.currentUser.id === this.props.post.userId) ?
             <>
-              <button type="button" onClick={() => { this.props.history.push(`/posts/${this.props.post.id}/edit`) }}>Edit</button>
-              <button type="button" onClick={() => this.props.deletePost(this.props.post.id)}>Delete</button>
-            </> : <></>
+              <Button size="sm" type="button" onClick={() => { this.props.history.push(`/posts/${this.props.post.id}/edit`) }}>Edit</Button>
+              <Button size="sm" type="button" onClick={() => this.props.deletePost(this.props.post.id)}>Delete</Button>
+            </> : <>
+            <Button size="sm" type="button" onClick={() => this.props.addFriend(this.props.userId)}>Add Friend</Button>
+            </>
           }
         </div>
-      </div>
+      </Card>
     )
   }
 }

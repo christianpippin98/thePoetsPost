@@ -11,6 +11,9 @@ export default {
   getAllGlobalPosts() {
     return fetch(`${remoteURL}/posts?privacyTypeId=1`).then(result => result.json())
   },
+  getAllLocalPosts() {
+    return fetch(`${remoteURL}/posts?privacyTypeId=2`).then(result => result.json())
+  },
   delete(id) {
     return fetch(`${remoteURL}/posts/${id}`, {
       method: "DELETE"

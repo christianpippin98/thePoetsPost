@@ -44,10 +44,11 @@ class Reg extends Component {
             };
             UsersManager.post(user)
               .then((user) => {
-                this.props.setUser(user)
-                console.log(user)
-                this.props.history.push("/mypost")
-
+                localStorage.setItem(
+                  "credentials",
+                  JSON.stringify(user)
+                )
+                window.location.reload(false)
               })
           } else {
             window.alert("chill bruh, sign in")

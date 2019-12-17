@@ -20,6 +20,41 @@
       "lastName": "David",
       "password": "jdavid",
       "id": 3
+    },
+    {
+      "email": "johnlong@gmail.com",
+      "password": "jlong",
+      "firstName": "John",
+      "lastName": "Long",
+      "id": 4
+    },
+    {
+      "email": "mattblagg@gmail.com",
+      "password": "mblagg",
+      "firstName": "Matt",
+      "lastName": "Blagg",
+      "id": 5
+    },
+    {
+      "email": "chasefite@gmail.com",
+      "password": "cfite",
+      "firstName": "Chase",
+      "lastName": "Fite",
+      "id": 6
+    },
+    {
+      "email": "chase@chase.com",
+      "password": "cc",
+      "firstName": "Chase",
+      "lastName": "Fite",
+      "id": 7
+    },
+    {
+      "email": "christianpippin98@gmail.com",
+      "password": "Jippin16!",
+      "firstName": "Ian",
+      "lastName": "Taylor",
+      "id": 8
     }
   ],
   "posts": [
@@ -32,12 +67,12 @@
       "id": 1
     },
     {
+      "id": 2,
       "name": "my newer new",
       "body": "newer new new new",
-      "privacyTypeId": 3,
       "userId": 2,
       "entryTypeId": 4,
-      "id": 2
+      "privacyTypeId": 1
     },
     {
       "name": "Let Me Be",
@@ -56,12 +91,12 @@
       "id": 4
     },
     {
+      "id": 5,
       "name": "Let Me Be",
       "body": "yyyyyyyyy",
-      "privacyTypeId": 1,
       "userId": 1,
       "entryTypeId": 1,
-      "id": 5
+      "privacyTypeId": 3
     },
     {
       "name": "Let Me Be",
@@ -72,12 +107,28 @@
       "id": 6
     },
     {
+      "id": 8,
       "name": "corri new local",
       "body": "mmmmmmmmmmmm",
-      "privacyTypeId": 2,
       "userId": 2,
       "entryTypeId": 2,
-      "id": 8
+      "privacyTypeId": 3
+    },
+    {
+      "id": 9,
+      "name": "A depressed software engineer who is obnoxiously Netflix-and-chilling with a chef during the Black Plague of 1347.",
+      "body": "asdfghjklkjhgfdsdfghjkl",
+      "userId": 4,
+      "entryTypeId": 2,
+      "privacyTypeId": 3
+    },
+    {
+      "id": 10,
+      "name": "oooooooooooo",
+      "body": "iiiiiiiiiiiiiiiiiiiiiiiiiiii",
+      "userId": 1,
+      "entryTypeId": 2,
+      "privacyTypeId": 2
     }
   ],
   "privacyTypes": [

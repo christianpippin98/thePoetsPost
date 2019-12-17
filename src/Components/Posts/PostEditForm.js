@@ -1,13 +1,14 @@
 import React, { Component } from "react"
 import PostManager from "../../Modules/PostManager"
-import { CustomInput, Form, FormGroup, Label, Button, Input } from 'reactstrap';
+import { CustomInput, Form, FormGroup, Button, Input } from 'reactstrap';
 
 class PostEditForm extends Component {
   //set the initial state
   state = {
     name: "",
     body: "",
-    privacy: "",
+    privacyTypeId: "",
+    privacyTypeNames: [],
     userId: "",
     entryTypeId: "",
     entryTypeNames: [],
@@ -30,7 +31,7 @@ class PostEditForm extends Component {
       body: this.state.body,
       userId: currentUser.id,
       entryTypeId: Number(this.state.entryTypeId),
-      privacy: this.state.privacy
+      privacyTypeId: Number(this.state.privacyTypeId)
     };
 
     PostManager.update(editedPost)
@@ -74,18 +75,16 @@ class PostEditForm extends Component {
             <Input type="textarea" onChange={this.handleFieldChange} name="text" id="body" placeholder="Entry Body" value={this.state.body} />
           </FormGroup>
           <FormGroup>
-            <CustomInput type="select" id="entryTypeId" name="customSelect" onChange={this.handleFieldChange} required>
-              <option value="">Select Type</option>
-              {this.state.entryTypeNames.map((name) => {
-                return <option key={name.id} value={name.id}>{name.name}</option>
+            <CustomInput type="select" id="entryTypeId" value={this.state.entryTypeId} name="customSelect" onChange={this.handleFieldChange} required>
+              {this.state.entryTypeNames.map((entryType) => {
+                return <option key={entryType.id} id={entryType.id} value={entryType.id}>{entryType.name}</option>
               })}
             </CustomInput>
           </FormGroup>
           <FormGroup>
-            <CustomInput type="select" id="privacyTypeId" onChange={this.handleFieldChange}>
-              <option value="">Select Privacy</option>
-              {this.state.privacyTypeNames.map((name) => {
-                return <option key={name.id} value={name.id}>{name.privacy}</option>
+            <CustomInput type="select" value={this.state.privacyTypeId} id="privacyTypeId" onChange={this.handleFieldChange}>
+              {this.state.privacyTypeNames.map((privacyType) => {
+                return <option key={privacyType.id} id={privacyType.id} value={privacyType.id}>{privacyType.privacy}</option>
               })}
             </CustomInput>
           </FormGroup>
