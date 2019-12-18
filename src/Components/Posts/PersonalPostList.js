@@ -16,8 +16,8 @@ class PersonalPostList extends Component {
                 this.setState({
                     posts: posts
                 })
+                console.log(posts)
             })
-
     }
 
     deletePost = id => {
@@ -39,6 +39,7 @@ class PersonalPostList extends Component {
                 <div className="container-cards">
                     {this.state.posts.map(post =>
                         <PostCard
+                            user={post.userId}
                             key={post.id}
                             post={post}
                             deletePost={this.deletePost}

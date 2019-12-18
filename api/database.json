@@ -129,6 +129,30 @@
       "userId": 1,
       "entryTypeId": 2,
       "privacyTypeId": 2
+    },
+    {
+      "name": "An ancient and snide ghost.",
+      "body": "asdfghjkl",
+      "privacyTypeId": 2,
+      "userId": 2,
+      "entryTypeId": 2,
+      "id": 11
+    },
+    {
+      "name": "A club-footed nun who is greedily trying to act impressive toward a corrupt wizard.",
+      "body": "A likable horseman of the Apocalypse who is optimistically spraying rather a lot of Febreze at Disney World, and and on the rolling sands of the Sahara Desert, and a possessive ventriloquist.",
+      "privacyTypeId": 1,
+      "userId": 3,
+      "entryTypeId": 2,
+      "id": 12
+    },
+    {
+      "name": "A scientist.",
+      "body": "A scientist who is stealthily trying to sell a used car on the steps of the Roman Forum, and a lonely princess who is successfully investing large amounts of cash in a swamp near New Orleans, and a demonic carpenter who is ferociously riding a mule in a disgusting public bathroom.",
+      "privacyTypeId": 1,
+      "userId": 5,
+      "entryTypeId": 4,
+      "id": 13
     }
   ],
   "privacyTypes": [
@@ -165,11 +189,9 @@
   ],
   "friends": [
     {
-      "id": 1,
-      "firstName": "Corri",
-      "lastName": "Golden",
-      "userId": 2,
-      "loggedInUserId": 1
+      "userId": 1,
+      "loggedInUserId": 5,
+      "id": 1
     }
   ]
 }

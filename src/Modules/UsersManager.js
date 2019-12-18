@@ -33,14 +33,5 @@ export default {
       },
       body: JSON.stringify(editedUser)
     }).then(data => data.json());
-  },
-  addFriend(userId) {
-    return fetch(`${remoteURL}/friends`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(userId)
-    }).then(data => data.json())
   }
 }

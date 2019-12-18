@@ -1,46 +1,92 @@
 import React, { Component } from "react"
 import PostCard from "./PostCard"
 import PostManager from "../../Modules/PostManager"
+import FriendsManager from "../../Modules/FriendsManager"
 import { Button } from 'reactstrap';
 
 class GlobalPostList extends Component {
     state = {
         posts: [],
+        userId: "",
+        loggedInUserId: "",
+        friends: [],
     }
 
 
     componentDidMount() {
+        const loggedInUser = JSON.parse(localStorage.getItem("credentials"))
         PostManager.getAllGlobalPosts()
             .then((posts) => {
                 this.setState({
                     posts: posts
                 })
             })
-
+        FriendsManager.getAllFriends(loggedInUser.id)
+            .then((friends) => {
+                this.setState({
+                    friends: friends
+                })
+            })
     }
 
     deletePost = id => {
         PostManager.delete(id)
-          .then(() => {
-            PostManager.getAllGlobalPosts()
-              .then((newPosts) => {
-                this.setState({
-                  posts: newPosts
+            .then(() => {
+                PostManager.getAllGlobalPosts()
+                    .then((newPosts) => {
+                        this.setState({
+                            posts: newPosts
+                        })
+                    })
+            })
+    }
+
+
+    deleteFriend = id => {
+        FriendsManager.delete(id)
+            .then(() => {
+                FriendsManager.getAllGlobalFriends()
+                    .then((newFriends) => {
+                        this.setState({
+                            friends: newFriends
+                        })
+                    })
+            })
+    }
+
+
+    addNewFriend = (friendUserId) => {
+        this.setState({ loadingStatus: true });
+        const currentUser = JSON.parse(localStorage.getItem("credentials"))
+        const newFriend = {
+            userId: friendUserId,
+            loggedInUserId: currentUser.id,
+        };
+        FriendsManager.addFriend(newFriend)
+            .then(() => {
+                FriendsManager.getAllFriends(currentUser.id)
+                .then((friends) => {
+                    this.setState({
+                        friends: friends
+                    })
                 })
-              })
-          })
-      }
+            })
+    }
+
 
     render() {
         return (
             <>
-            <Button color="secondary" size="sm" onClick={() => { this.props.history.push("/globalpost/new") }}>New Post</Button>
+                <Button color="secondary" size="sm" onClick={() => { this.props.history.push("/globalpost/new") }}>New Post</Button>
                 <div className="container-cards">
                     {this.state.posts.map(post =>
                         <PostCard
+                            user={post.userId}
                             key={post.id}
                             post={post}
+                            friends={this.state.friends}
                             deletePost={this.deletePost}
+                            addNewFriend={this.addNewFriend}
                             {...this.props}
                         />
                     )}

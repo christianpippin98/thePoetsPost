@@ -1,18 +1,20 @@
-  const remoteURL = "http://localhost:5002"
+const remoteURL = "http://localhost:5002"
 const userSpecifics = "?userId="
+const expandUser = "&_expand=user"
+
 
 export default {
   getPost(id) {
     return fetch(`${remoteURL}/posts/${id}`).then(result => result.json())
   },
   getAllPersonalPosts(id) {
-    return fetch(`${remoteURL}/posts${userSpecifics}${id}`).then(result => result.json())
+    return fetch(`${remoteURL}/posts${userSpecifics}${id}${expandUser}`).then(result => result.json())
   },
   getAllGlobalPosts() {
-    return fetch(`${remoteURL}/posts?privacyTypeId=1`).then(result => result.json())
+    return fetch(`${remoteURL}/posts?privacyTypeId=1${expandUser}`).then(result => result.json())
   },
   getAllLocalPosts() {
-    return fetch(`${remoteURL}/posts?privacyTypeId=2`).then(result => result.json())
+    return fetch(`${remoteURL}/posts?privacyTypeId=2${expandUser}`).then(result => result.json())
   },
   delete(id) {
     return fetch(`${remoteURL}/posts/${id}`, {
