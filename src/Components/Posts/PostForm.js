@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 // import { Link } from "react-router-dom";
 import PostManager from "../../Modules/PostManager";
 import PromptCard from "../Prompt/PromptCard"
-import { CustomInput, Form, FormGroup, Label, Button, Input } from 'reactstrap';
+import { CustomInput, Form, FormGroup, Button, Input } from 'reactstrap';
 
 
 class PostForm extends Component {
@@ -79,16 +79,16 @@ class PostForm extends Component {
                     <FormGroup>
                         <CustomInput type="select" id="entryTypeId" name="customSelect" onChange={this.handleFieldChange} required>
                             <option value="">Select Type</option>
-                            {this.state.entryTypeNames.map((name) => {
-                                return <option key={name.id} value={name.id}>{name.name}</option>
+                            {this.state.entryTypeNames.map((entryType) => {
+                                return <option key={entryType.id} value={entryType.id}>{entryType.name}</option>
                             })}
                         </CustomInput>
                     </FormGroup>
                     <FormGroup>
                         <CustomInput type="select" id="privacyTypeId" onChange={this.handleFieldChange}>
                             <option value="">Select Privacy</option>
-                            {this.state.privacyTypeNames.map((name) => {
-                                return <option key={name.id} value={name.id}>{name.privacy}</option>
+                            {this.state.privacyTypeNames.map((privacyType) => {
+                                return <option key={privacyType.id} value={privacyType.id}>{privacyType.privacy}</option>
                             })}
                         </CustomInput>
                     </FormGroup>

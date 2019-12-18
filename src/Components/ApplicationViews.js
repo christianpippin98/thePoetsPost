@@ -7,6 +7,9 @@ import Login from "./Auth/Login";
 import Reg from "./Auth/Reg"
 import LandingPage from "./Auth/LandingPage"
 import GlobalPostList from "./Posts/GlobalPostList"
+import LocalPostList from "./Posts/LocalPostList";
+
+
 
 export default class ApplicationViews extends Component {
 
@@ -20,27 +23,29 @@ export default class ApplicationViews extends Component {
                 <Route
                     exact path="/" render={props => {
                         if (this.isAuthenticated()) {
-                            return <Redirect to="/mypost" />
+                            return <Redirect to="/globalpost" />
                         } else {
                             return <LandingPage setUser={this.props.setUser} {...props} />
                         }
                     }}
                 />
 
+
                 <Route
                     exact path="/login" render={props => {
                         if (this.isAuthenticated()) {
-                            return <Redirect to="/mypost" />
+                            return <Redirect to="/globalpost" />
                         } else {
                             return <Login setUser={this.props.setUser} {...props} />
                         }
                     }}
                 />
 
+
                 <Route
                     exact path="/register" render={props => {
                         if (this.isAuthenticated()) {
-                            return <Redirect to="/mypost" />
+                            return <Redirect to="/globalpost" />
                         } else {
                             return <Reg setUser={this.props.setUser} {...props} />
                         }
@@ -48,12 +53,12 @@ export default class ApplicationViews extends Component {
                 />
 
 
-
                 <Route
                     path="/friends" render={props => {
                         return null
                     }}
                 />
+
 
                 <Route
                     exact path="/mypost" render={props => {
@@ -65,11 +70,17 @@ export default class ApplicationViews extends Component {
                     }}
                 />
 
+
                 <Route
                     path="/mypost/new" render={props => {
-                        return <PostForm {...props} />
+                        if (this.isAuthenticated()) {
+                            return <PostForm {...props} />
+                        } else {
+                            return <LandingPage setUser={this.props.setUser} {...props} />
+                        }
                     }}
                 />
+
 
                 <Route exact path="/globalpost" render={props => {
                     if (this.isAuthenticated()) {
@@ -77,13 +88,42 @@ export default class ApplicationViews extends Component {
                     } else {
                         return <Redirect to="/" />
                     }
-                }} />
-                {/* the above code checks session storage and if no user is in session storage, it will not render */}
+                }}
+                />
+
+
                 <Route
                     path="/globalpost/new" render={props => {
-                        return <PostForm {...props} />
+                        if (this.isAuthenticated()) {
+                            return <PostForm {...props} />
+                        } else {
+                            return <LandingPage setUser={this.props.setUser} {...props} />
+                        }
                     }}
                 />
+
+
+                <Route exact path="/localpost" render={props => {
+                    if (this.isAuthenticated()) {
+                        return <LocalPostList {...props} />
+                    } else {
+                        return <Redirect to="/" />
+                    }
+                }}
+                />
+
+
+                <Route
+                    path="/localpost/new" render={props => {
+                        if (this.isAuthenticated()) {
+                            return <PostForm {...props} />
+                        } else {
+                            return <LandingPage setUser={this.props.setUser} {...props} />
+                        }
+                    }}
+                />
+
+
                 <Route
                     path="/posts/:postId(\d+)/edit" render={props => {
                         return <PostEditForm {...props} />

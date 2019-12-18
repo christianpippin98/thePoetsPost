@@ -46,7 +46,7 @@ class ThePoetsPost extends Component {
     return (
       <React.Fragment>
 
-        <NavBar user={this.state.user} clearUser={this.clearUser} />
+        <NavBar user={this.state.user} setUser={this.setUser} clearUser={this.clearUser} />
         <ApplicationViews user={this.state.user}
           setUser={this.setUser} />
       </React.Fragment>

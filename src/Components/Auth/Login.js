@@ -30,8 +30,11 @@ class Login extends Component {
         } else {
           const user = existingUser[0]
           if (user.password === this.state.password) {
-            this.props.setUser(user)
-            this.props.history.push("/mypost")
+            localStorage.setItem(
+              "credentials",
+              JSON.stringify(user)
+            )
+            window.location.reload(false)
           } else {
             alert("try again buster")
           }

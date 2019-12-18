@@ -4,18 +4,16 @@ import PostManager from "../../Modules/PostManager"
 import FriendsManager from "../../Modules/FriendsManager"
 import { Button } from 'reactstrap';
 
-class GlobalPostList extends Component {
+class LocalPostList extends Component {
     state = {
         posts: [],
-        userId: "",
-        loggedInUserId: "",
         friends: [],
     }
 
 
     componentDidMount() {
         const loggedInUser = JSON.parse(localStorage.getItem("credentials"))
-        PostManager.getAllGlobalPosts()
+        PostManager.getAllLocalPosts()
             .then((posts) => {
                 this.setState({
                     posts: posts
@@ -29,10 +27,11 @@ class GlobalPostList extends Component {
             })
     }
 
+
     deletePost = id => {
         PostManager.delete(id)
             .then(() => {
-                PostManager.getAllGlobalPosts()
+                PostManager.getAllLocalPosts()
                     .then((newPosts) => {
                         this.setState({
                             posts: newPosts
@@ -55,29 +54,10 @@ class GlobalPostList extends Component {
     }
 
 
-    addNewFriend = (friendUserId) => {
-        this.setState({ loadingStatus: true });
-        const currentUser = JSON.parse(localStorage.getItem("credentials"))
-        const newFriend = {
-            userId: friendUserId,
-            loggedInUserId: currentUser.id,
-        };
-        FriendsManager.addFriend(newFriend)
-            .then(() => {
-                FriendsManager.getAllFriends(currentUser.id)
-                .then((friends) => {
-                    this.setState({
-                        friends: friends
-                    })
-                })
-            })
-    }
-
-
     render() {
         return (
             <>
-                <Button color="secondary" size="sm" onClick={() => { this.props.history.push("/globalpost/new") }}>New Post</Button>
+                <Button color="secondary" size="sm" onClick={() => { this.props.history.push("/localpost/new") }}>New Post</Button>
                 <div className="container-cards">
                     {this.state.posts.map(post =>
                         <PostCard
@@ -86,7 +66,6 @@ class GlobalPostList extends Component {
                             post={post}
                             friends={this.state.friends}
                             deletePost={this.deletePost}
-                            addNewFriend={this.addNewFriend}
                             {...this.props}
                         />
                     )}
@@ -96,4 +75,4 @@ class GlobalPostList extends Component {
     }
 }
 
-export default GlobalPostList
+export default LocalPostList
