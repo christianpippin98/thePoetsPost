@@ -21,6 +21,9 @@ class NavBar extends Component {
                             <Link className="nav-link" to="/mypost">My Post</Link>
                         </li>
                         <li className="nav-item">
+                            <Link className="nav-link" to="/following">Following</Link>
+                        </li>
+                        <li className="nav-item">
                             <Link className="nav-link" to="/" onClick={this.props.clearUser}>Logout</Link>
                         </li>
                     </ul>

@@ -156,6 +156,14 @@
       "userId": 5,
       "entryTypeId": 2,
       "id": 15
+    },
+    {
+      "name": "A trial lawyer.",
+      "body": "A robot who is defiantly co-piloting a jumbo jet in a burning building, and a tactless hobbit who is optimistically playing \"doctor\" with a pale Greek demigod in Carnegie Hall.",
+      "privacyTypeId": 3,
+      "userId": 1,
+      "entryTypeId": 2,
+      "id": 16
     }
   ],
   "privacyTypes": [
@@ -197,16 +205,6 @@
       "id": 1
     },
     {
-      "userId": 3,
-      "loggedInUserId": 5,
-      "id": 2
-    },
-    {
-      "userId": 3,
-      "loggedInUserId": 1,
-      "id": 3
-    },
-    {
       "userId": 4,
       "loggedInUserId": 1,
       "id": 4
@@ -240,6 +238,11 @@
       "userId": 5,
       "loggedInUserId": 4,
       "id": 10
+    },
+    {
+      "userId": 3,
+      "loggedInUserId": 1,
+      "id": 11
     }
   ]
 }

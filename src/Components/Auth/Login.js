@@ -26,7 +26,7 @@ class Login extends Component {
     UserManager.searchUser(this.state.email)
       .then((existingUser) => {
         if (existingUser.length === 0) {
-          alert("dagumit")
+          alert("Register An Account Please")
         } else {
           const user = existingUser[0]
           if (user.password === this.state.password) {
@@ -36,7 +36,7 @@ class Login extends Component {
             )
             window.location.reload(false)
           } else {
-            alert("try again buster")
+            alert("Fill Out Login Info Please")
           }
         }
       })

@@ -8,6 +8,8 @@ import Reg from "./Auth/Reg"
 import LandingPage from "./Auth/LandingPage"
 import GlobalPostList from "./Posts/GlobalPostList"
 import LocalPostList from "./Posts/LocalPostList";
+import FollowingList from "./Following/FollowingList";
+
 
 
 
@@ -54,8 +56,12 @@ export default class ApplicationViews extends Component {
 
 
                 <Route
-                    path="/friends" render={props => {
-                        return null
+                    path="/following" render={props => {
+                        if (this.isAuthenticated()) {
+                            return <FollowingList {...props} />
+                        } else {
+                            return <Redirect to="/" />
+                        }
                     }}
                 />
 
