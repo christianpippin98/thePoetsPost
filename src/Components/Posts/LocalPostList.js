@@ -13,20 +13,33 @@ class LocalPostList extends Component {
     }
 
 
+    pushEntry = (array1, array2, item) => {
+        // if the object does not already exist in the array, push the object into the array
+        if (array1.find(({ userId }) => userId === item.userId)) {
+            array2.push(item);
+        }
+    }
+
+
     componentDidMount() {
+        let postsArray = []
         const loggedInUser = JSON.parse(sessionStorage.getItem("credentials"))
-        PostManager.getAllLocalPosts()
-            .then((posts) => {
-                this.setState({
-                    posts: posts
-                })
-            })
         FriendsManager.getAllFriends(loggedInUser.id)
             .then((friends) => {
                 this.setState({
                     friends: friends
+                }) 
+            })
+            PostManager.getAllLocalPosts()
+            .then((posts) => {
+                posts.forEach(post => {
+                    this.pushEntry(this.state.friends, postsArray, post)
+                })
+                this.setState({
+                    posts: postsArray
                 })
             })
+        
     }
 
 
