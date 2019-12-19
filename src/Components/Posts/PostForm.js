@@ -33,7 +33,7 @@ class PostForm extends Component {
             window.alert("Try Harder Next Time Scrub");
         } else {
             this.setState({ loadingStatus: true });
-            const currentUser = JSON.parse(localStorage.getItem("credentials"))
+            const currentUser = JSON.parse(sessionStorage.getItem("credentials"))
             const post = {
                 name: this.state.name,
                 body: this.state.body,

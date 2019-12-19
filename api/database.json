@@ -8,13 +8,6 @@
       "password": "jippin"
     },
     {
-      "id": 2,
-      "firstName": "Corri",
-      "lastName": "Golden",
-      "email": "corrigolden@gmail.com",
-      "password": "colden"
-    },
-    {
       "email": "jisiedavid@gmail.com",
       "firstName": "Jisie",
       "lastName": "David",
@@ -55,25 +48,23 @@
       "firstName": "Ian",
       "lastName": "Taylor",
       "id": 8
+    },
+    {
+      "email": "seedofabba@yahoo.com",
+      "password": "myfather7",
+      "firstName": "Corri",
+      "lastName": "Golden",
+      "id": 9
+    },
+    {
+      "email": "maryremo@gmail.com",
+      "password": "1234",
+      "firstName": "Mary",
+      "lastName": "Remo",
+      "id": 10
     }
   ],
   "posts": [
-    {
-      "name": "My New Post",
-      "body": "New New New New",
-      "privacyTypeId": 1,
-      "userId": 1,
-      "entryTypeId": 2,
-      "id": 1
-    },
-    {
-      "id": 2,
-      "name": "my newer new",
-      "body": "newer new new new",
-      "userId": 2,
-      "entryTypeId": 4,
-      "privacyTypeId": 1
-    },
     {
       "name": "Let Me Be",
       "body": "nnnnnnnn",
@@ -83,35 +74,11 @@
       "id": 3
     },
     {
-      "name": "Let Me Be",
-      "body": "mmmmm",
-      "privacyTypeId": 1,
-      "userId": 1,
-      "entryTypeId": 1,
-      "id": 4
-    },
-    {
       "id": 5,
       "name": "Let Me Be",
       "body": "yyyyyyyyy",
       "userId": 1,
       "entryTypeId": 1,
-      "privacyTypeId": 3
-    },
-    {
-      "name": "Let Me Be",
-      "body": "ttttttttttttt",
-      "privacyTypeId": 1,
-      "userId": 1,
-      "entryTypeId": 3,
-      "id": 6
-    },
-    {
-      "id": 8,
-      "name": "corri new local",
-      "body": "mmmmmmmmmmmm",
-      "userId": 2,
-      "entryTypeId": 2,
       "privacyTypeId": 3
     },
     {
@@ -127,16 +94,8 @@
       "name": "oooooooooooo",
       "body": "iiiiiiiiiiiiiiiiiiiiiiiiiiii",
       "userId": 1,
-      "entryTypeId": 2,
-      "privacyTypeId": 2
-    },
-    {
-      "name": "An ancient and snide ghost.",
-      "body": "asdfghjkl",
-      "privacyTypeId": 2,
-      "userId": 2,
-      "entryTypeId": 2,
-      "id": 11
+      "entryTypeId": 1,
+      "privacyTypeId": 1
     },
     {
       "name": "A club-footed nun who is greedily trying to act impressive toward a corrupt wizard.",
@@ -153,6 +112,38 @@
       "userId": 5,
       "entryTypeId": 4,
       "id": 13
+    },
+    {
+      "id": 14,
+      "name": "FreeStyle",
+      "body": "The coal miner wrestled with mud in his hand",
+      "userId": 9,
+      "entryTypeId": 1,
+      "privacyTypeId": 1
+    },
+    {
+      "name": "A bishop",
+      "body": "A hobbit who is arrogantly running at Boot Camp graduation, and an ancient nerd who is rudely feeling a little hurt in a dead end alley, and a toasty-warm politician who is expertly making uncomfortable eye contact during a flood, and an unkempt spaceship captain who is mysteriously lecturing in church on a Sunday morning, and a likable opera singer who is sheepishly doing a root canal operation on a deserted island, and a lonely bus driver who is selfishly lathering in San Francisco, and a well-dressed Muppet who is anxiously mud-wrestling during the Black Plague of 1347, and a self-assured monk who is optimistically pretending to be on a boat.",
+      "privacyTypeId": 1,
+      "userId": 1,
+      "entryTypeId": 2,
+      "id": 15
+    },
+    {
+      "name": "On the roof of the White House",
+      "body": "In a field of golden wheat, and a sick philosopher who is successfully sobbing under the unsleeping Eye of Sauron, and an outgoing mailman who is entertainingly hiding on the International Space Station, and an outgoing ninja warrior who is disgruntledly going to Senior Prom at the bottom of an abandoned salt mine.",
+      "privacyTypeId": 1,
+      "userId": 6,
+      "entryTypeId": 3,
+      "id": 16
+    },
+    {
+      "id": 17,
+      "name": "asdfghjkl",
+      "body": "Gracefully lathering up a gorgeous werewolf who is carving a marble bust every couple of hours, and a calm ghost who is wildly spraying rather a lot of Febreze in a swamp near New Orleans.",
+      "userId": 1,
+      "entryTypeId": 2,
+      "privacyTypeId": 1
     }
   ],
   "privacyTypes": [
@@ -189,9 +180,24 @@
   ],
   "friends": [
     {
-      "userId": 1,
-      "loggedInUserId": 5,
+      "userId": 6,
+      "loggedInUserId": 1,
       "id": 1
+    },
+    {
+      "userId": 9,
+      "loggedInUserId": 1,
+      "id": 7
+    },
+    {
+      "userId": 3,
+      "loggedInUserId": 1,
+      "id": 9
+    },
+    {
+      "userId": 5,
+      "loggedInUserId": 1,
+      "id": 10
     }
   ]
 }

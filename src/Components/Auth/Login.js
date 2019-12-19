@@ -30,7 +30,7 @@ class Login extends Component {
         } else {
           const user = existingUser[0]
           if (user.password === this.state.password) {
-            localStorage.setItem(
+            sessionStorage.setItem(
               "credentials",
               JSON.stringify(user)
             )

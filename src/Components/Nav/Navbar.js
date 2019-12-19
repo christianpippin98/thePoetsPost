@@ -5,7 +5,7 @@ import { Link } from "react-router-dom"
 // Navbar called by app views to direct to different sections of the site
 class NavBar extends Component {
 
-    isAuthenticated = () => localStorage.getItem("credentials") !== null
+    isAuthenticated = () => sessionStorage.getItem("credentials") !== null
     render() {
         if (this.props.user === true) {
             return (

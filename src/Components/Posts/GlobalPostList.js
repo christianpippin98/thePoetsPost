@@ -14,7 +14,7 @@ class GlobalPostList extends Component {
 
 
     componentDidMount() {
-        const loggedInUser = JSON.parse(localStorage.getItem("credentials"))
+        const loggedInUser = JSON.parse(sessionStorage.getItem("credentials"))
         PostManager.getAllGlobalPosts()
             .then((posts) => {
                 this.setState({
@@ -42,22 +42,9 @@ class GlobalPostList extends Component {
     }
 
 
-    deleteFriend = id => {
-        FriendsManager.delete(id)
-            .then(() => {
-                FriendsManager.getAllGlobalFriends()
-                    .then((newFriends) => {
-                        this.setState({
-                            friends: newFriends
-                        })
-                    })
-            })
-    }
-
-
     addNewFriend = (friendUserId) => {
         this.setState({ loadingStatus: true });
-        const currentUser = JSON.parse(localStorage.getItem("credentials"))
+        const currentUser = JSON.parse(sessionStorage.getItem("credentials"))
         const newFriend = {
             userId: friendUserId,
             loggedInUserId: currentUser.id,
@@ -65,12 +52,28 @@ class GlobalPostList extends Component {
         FriendsManager.addFriend(newFriend)
             .then(() => {
                 FriendsManager.getAllFriends(currentUser.id)
-                .then((friends) => {
-                    this.setState({
-                        friends: friends
+                    .then((friends) => {
+                        this.setState({
+                            friends: friends
+                        })
                     })
-                })
             })
+    }
+
+
+    unfollow = id => {
+        const currentUser = JSON.parse(sessionStorage.getItem("credentials"))
+        FriendsManager.getFriend(currentUser.id, id).then((response) => {
+            FriendsManager.delete(response[0].id)
+            .then(() => {
+                FriendsManager.getAllFriends(currentUser.id)
+                    .then((friends) => {
+                        this.setState({
+                            friends: friends
+                        })
+                    })
+            })
+        })
     }
 
 
@@ -87,6 +90,7 @@ class GlobalPostList extends Component {
                             friends={this.state.friends}
                             deletePost={this.deletePost}
                             addNewFriend={this.addNewFriend}
+                            unfollow={this.unfollow}
                             {...this.props}
                         />
                     )}

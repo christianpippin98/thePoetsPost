@@ -45,7 +45,7 @@ class PostCard extends Component {
   }
 
 
-  currentUser = JSON.parse(localStorage.getItem("credentials"))
+  currentUser = JSON.parse(sessionStorage.getItem("credentials"))
   isFriend () {
     
     let friendship = false
@@ -59,6 +59,7 @@ class PostCard extends Component {
   }
 
   render() {
+    console.log(this.props.post.user.id)
     return (
       <Card className="card">
         <div className="card-body">
@@ -71,7 +72,7 @@ class PostCard extends Component {
               <Button size="sm" type="button" onClick={() => this.props.deletePost(this.props.post.id)}>Delete</Button>
             </> : (this.isFriend()) ?
               <>
-              <Button size="sm" type="button" onClick={() => this.props.deleteFriend(this.props.post.user.id)}>Unfollow</Button>
+              <Button size="sm" type="button" onClick={() => this.props.unfollow(this.props.post.user.id)}>Unfollow</Button>
               </> :
               <>
                 <Button size="sm" type="button" onClick={() => this.props.addNewFriend(this.props.post.user.id)}>Follow</Button>
