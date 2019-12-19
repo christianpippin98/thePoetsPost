@@ -28,9 +28,9 @@ class LocalPostList extends Component {
             .then((friends) => {
                 this.setState({
                     friends: friends
-                }) 
+                })
             })
-            PostManager.getAllLocalPosts()
+        PostManager.getAllLocalPosts()
             .then((posts) => {
                 posts.forEach(post => {
                     this.pushEntry(this.state.friends, postsArray, post)
@@ -39,7 +39,7 @@ class LocalPostList extends Component {
                     posts: postsArray
                 })
             })
-        
+
     }
 
 
@@ -60,14 +60,14 @@ class LocalPostList extends Component {
         const currentUser = JSON.parse(sessionStorage.getItem("credentials"))
         FriendsManager.getFriend(currentUser.id, id).then((response) => {
             FriendsManager.delete(response[0].id)
-            .then(() => {
-                FriendsManager.getAllFriends(currentUser.id)
-                    .then((friends) => {
-                        this.setState({
-                            friends: friends
+                .then(() => {
+                    FriendsManager.getAllFriends(currentUser.id)
+                        .then((friends) => {
+                            this.setState({
+                                friends: friends
+                            })
                         })
-                    })
-            })
+                })
         })
     }
 

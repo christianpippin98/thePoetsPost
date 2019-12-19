@@ -60,7 +60,7 @@ class PostCard extends Component {
 
   render() {
     return (
-      <Card className="card">
+      <Card body inverse style={{ backgroundColor: '#333', borderColor: '#333' }}>
         <div className="card-body">
           <p><b>{this.props.post.user.firstName} {this.props.post.user.lastName}</b></p>
           <CardTitle className="card-title"><b>{this.props.post.name}</b></CardTitle>
