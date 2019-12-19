@@ -14,7 +14,7 @@ export default {
     return fetch(`${remoteURL}/posts?privacyTypeId=1${expandUser}`).then(result => result.json())
   },
   getAllLocalPosts() {
-    return fetch(`${remoteURL}/posts?privacyTypeId=2${expandUser}`).then(result => result.json())
+    return fetch(`${remoteURL}/posts?privacyTypeId=2${expandUser}&privacyTypeId=1${expandUser}`).then(result => result.json())
   },
   delete(id) {
     return fetch(`${remoteURL}/posts/${id}`, {

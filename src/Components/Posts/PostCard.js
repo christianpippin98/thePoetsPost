@@ -59,7 +59,6 @@ class PostCard extends Component {
   }
 
   render() {
-    console.log(this.props.post.user.id)
     return (
       <Card className="card">
         <div className="card-body">

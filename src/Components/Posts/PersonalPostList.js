@@ -16,7 +16,6 @@ class PersonalPostList extends Component {
                 this.setState({
                     posts: posts
                 })
-                console.log(posts)
             })
     }
 

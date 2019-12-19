@@ -8,142 +8,154 @@
       "password": "jippin"
     },
     {
-      "email": "jisiedavid@gmail.com",
-      "firstName": "Jisie",
-      "lastName": "David",
-      "password": "jdavid",
-      "id": 3
-    },
-    {
-      "email": "johnlong@gmail.com",
-      "password": "jlong",
-      "firstName": "John",
-      "lastName": "Long",
-      "id": 4
+      "email": "corrigolden@gmail.com",
+      "password": "cgolden",
+      "firstName": "Corri",
+      "lastName": "Golden",
+      "id": 2
     },
     {
       "email": "mattblagg@gmail.com",
       "password": "mblagg",
       "firstName": "Matt",
       "lastName": "Blagg",
-      "id": 5
+      "id": 3
     },
     {
       "email": "chasefite@gmail.com",
       "password": "cfite",
       "firstName": "Chase",
       "lastName": "Fite",
-      "id": 6
+      "id": 4
     },
     {
-      "email": "chase@chase.com",
-      "password": "cc",
-      "firstName": "Chase",
-      "lastName": "Fite",
-      "id": 7
-    },
-    {
-      "email": "christianpippin98@gmail.com",
-      "password": "Jippin16!",
-      "firstName": "Ian",
-      "lastName": "Taylor",
-      "id": 8
-    },
-    {
-      "email": "seedofabba@yahoo.com",
-      "password": "myfather7",
-      "firstName": "Corri",
-      "lastName": "Golden",
-      "id": 9
-    },
-    {
-      "email": "maryremo@gmail.com",
-      "password": "1234",
-      "firstName": "Mary",
-      "lastName": "Remo",
-      "id": 10
+      "email": "jisiedavid@gmail.com",
+      "password": "jdavid",
+      "firstName": "Jisie",
+      "lastName": "David",
+      "id": 5
     }
   ],
   "posts": [
     {
-      "name": "Let Me Be",
-      "body": "nnnnnnnn",
-      "privacyTypeId": 3,
+      "name": "A likable superhero.",
+      "body": "A cute mailman who is quickly spraying rather a lot of Febreze back in the good ol' days, and a blushing janitor who is obediently feeling a little hurt on the streets of Moscow, and a talkative Smurf who is wildly fetching coffee in first class on a trans-Atlantic flight, and a posh philosopher who is sheepishly opening a can of kidney beans at dawn, and a medicated Elvis impersonator who is humbly investing large amounts of cash in line at the DMV, and a disheveled Greek demigod who is emotionally taking the family dog for a walk in the basement.",
+      "privacyTypeId": 1,
       "userId": 1,
       "entryTypeId": 2,
+      "id": 1
+    },
+    {
+      "name": "A vegan politician.",
+      "body": "A pale Oompa Loompa who is anxiously telling a joke every couple of hours, and an outgoing bank robber who is carelessly reading mean Tweets in the Apple store.",
+      "privacyTypeId": 2,
+      "userId": 1,
+      "entryTypeId": 1,
+      "id": 2
+    },
+    {
+      "name": "A calm grandma.",
+      "body": "A diseased soccer mom who is confusedly wrapping a Chanukah present beneath the Eiffel Tower, and a troublesome dictator who is discreetly being made miserable in plain sight.",
+      "privacyTypeId": 3,
+      "userId": 1,
+      "entryTypeId": 3,
       "id": 3
     },
     {
-      "id": 5,
-      "name": "Let Me Be",
-      "body": "yyyyyyyyy",
-      "userId": 1,
-      "entryTypeId": 1,
-      "privacyTypeId": 3
+      "name": "Suspiciously writing a poem.",
+      "body": "Delicately driving a bulldozer under the unsleeping Eye of Sauron, and a corrupt superhero who is carelessly jogging in a field of goats, and enthusiastically relaxing on a boat, and a blushing ninja warrior who is sensitively doing the Hokey-Pokey during a flood.",
+      "privacyTypeId": 1,
+      "userId": 2,
+      "entryTypeId": 4,
+      "id": 4
     },
     {
-      "id": 9,
-      "name": "A depressed software engineer who is obnoxiously Netflix-and-chilling with a chef during the Black Plague of 1347.",
-      "body": "asdfghjklkjhgfdsdfghjkl",
-      "userId": 4,
+      "name": "Willfully discovering a new world.",
+      "body": "Aggressively reading Miranda rights on a deserted island, and a clever stormtrooper who is nervously dueling on a busy Monday, and a clever monk who is skeptically out to lunch on the Moon.",
+      "privacyTypeId": 2,
+      "userId": 2,
+      "entryTypeId": 1,
+      "id": 5
+    },
+    {
+      "name": "Slowly in a shouting match.",
+      "body": "Wisely throwing stones all night long, and a classy tap-dancer who is excitedly stealing on a busy Monday, and a fishy calligraphy enthusiast.",
+      "privacyTypeId": 3,
+      "userId": 2,
       "entryTypeId": 2,
-      "privacyTypeId": 3
+      "id": 6
     },
     {
-      "id": 10,
-      "name": "oooooooooooo",
-      "body": "iiiiiiiiiiiiiiiiiiiiiiiiiiii",
-      "userId": 1,
-      "entryTypeId": 1,
-      "privacyTypeId": 1
-    },
-    {
-      "name": "A club-footed nun who is greedily trying to act impressive toward a corrupt wizard.",
-      "body": "A likable horseman of the Apocalypse who is optimistically spraying rather a lot of Febreze at Disney World, and and on the rolling sands of the Sahara Desert, and a possessive ventriloquist.",
+      "name": "A millionaire.",
+      "body": "A nerd who is lazily folding laundry in a glass house, and an unkempt basketball player who is quickly running in San Francisco, and a sad Presidential candidate.",
       "privacyTypeId": 1,
       "userId": 3,
+      "entryTypeId": 3,
+      "id": 7
+    },
+    {
+      "name": "An opera singer.",
+      "body": "A bishop who is absentmindedly contemplating the Theory of Relativity in Nelson Mandela's jail cell in 1983, and a blushing Elvis impersonator who is willfully singing the alphabet in the lost city of Ghadames, and a posh grandpa.",
+      "privacyTypeId": 2,
+      "userId": 3,
+      "entryTypeId": 4,
+      "id": 8
+    },
+    {
+      "name": "A Navy SEAL.",
+      "body": "A piano virtuoso who is awkwardly roasting marshmallows over a campfire one day before the wedding, and a considerate Yeti who is carelessly accompanied on the xylophone in a swamp near New Orleans, and a cute nerd.",
+      "privacyTypeId": 3,
+      "userId": 3,
+      "entryTypeId": 1,
+      "id": 9
+    },
+    {
+      "name": "In church on a Sunday morning.",
+      "body": "In the McDonald's drive-thru, and a self-possessed Hogwarts professor who is rudely telling a joke on the Stanford University Quad, and a self-possessed Samurai who is quickly feeling threatened.",
+      "privacyTypeId": 1,
+      "userId": 4,
+      "entryTypeId": 1,
+      "id": 10
+    },
+    {
+      "name": "In an all-you-can-eat buffet line.",
+      "body": "Back in the good ol' days, and a sad farmer who is lazily getting tickled beneath the Eiffel Tower, and a fashionable monk who is secretively ordering 10 pounds of General Tso's Chicken.",
+      "privacyTypeId": 2,
+      "userId": 4,
       "entryTypeId": 2,
+      "id": 11
+    },
+    {
+      "name": "On the Ellen Show.",
+      "body": "Under your bed, and a blue-tinted Spaniard who is happily writing a poem on a Russian highway with a military escort, and an unpleasant software engineer who is forgetfully on fire.",
+      "privacyTypeId": 3,
+      "userId": 4,
+      "entryTypeId": 3,
       "id": 12
     },
     {
-      "name": "A scientist.",
-      "body": "A scientist who is stealthily trying to sell a used car on the steps of the Roman Forum, and a lonely princess who is successfully investing large amounts of cash in a swamp near New Orleans, and a demonic carpenter who is ferociously riding a mule in a disgusting public bathroom.",
+      "name": "Stealing the identity.",
+      "body": "Singing the alphabet in a slimy cave, and a pale dwarf who is bravely mud-wrestling in a high school gymnasium, and a fishy nun who is merrily voting.",
       "privacyTypeId": 1,
       "userId": 5,
       "entryTypeId": 4,
       "id": 13
     },
     {
-      "id": 14,
-      "name": "FreeStyle",
-      "body": "The coal miner wrestled with mud in his hand",
-      "userId": 9,
-      "entryTypeId": 1,
-      "privacyTypeId": 1
+      "name": "Doing an impression.",
+      "body": "Opening a can of kidney beans one day before the wedding, and a medicated Mormon who is coldly making a sandwich in the Eigth Circle of Hell, and an attractive college student who is quietly drinking a whole bottle of hot sauce as a result of a bet.",
+      "privacyTypeId": 2,
+      "userId": 5,
+      "entryTypeId": 4,
+      "id": 14
     },
     {
-      "name": "A bishop",
-      "body": "A hobbit who is arrogantly running at Boot Camp graduation, and an ancient nerd who is rudely feeling a little hurt in a dead end alley, and a toasty-warm politician who is expertly making uncomfortable eye contact during a flood, and an unkempt spaceship captain who is mysteriously lecturing in church on a Sunday morning, and a likable opera singer who is sheepishly doing a root canal operation on a deserted island, and a lonely bus driver who is selfishly lathering in San Francisco, and a well-dressed Muppet who is anxiously mud-wrestling during the Black Plague of 1347, and a self-assured monk who is optimistically pretending to be on a boat.",
-      "privacyTypeId": 1,
-      "userId": 1,
+      "name": "Wrapping a Chanukah present.",
+      "body": "Getting jiggy on the streets of Moscow, and a considerate Spaniard who is stealthily trying to act impressive back in the good ol' days, and a posh tap-dancer who is messily reading mean Tweets.",
+      "privacyTypeId": 3,
+      "userId": 5,
       "entryTypeId": 2,
       "id": 15
-    },
-    {
-      "name": "On the roof of the White House",
-      "body": "In a field of golden wheat, and a sick philosopher who is successfully sobbing under the unsleeping Eye of Sauron, and an outgoing mailman who is entertainingly hiding on the International Space Station, and an outgoing ninja warrior who is disgruntledly going to Senior Prom at the bottom of an abandoned salt mine.",
-      "privacyTypeId": 1,
-      "userId": 6,
-      "entryTypeId": 3,
-      "id": 16
-    },
-    {
-      "id": 17,
-      "name": "asdfghjkl",
-      "body": "Gracefully lathering up a gorgeous werewolf who is carving a marble bust every couple of hours, and a calm ghost who is wildly spraying rather a lot of Febreze in a swamp near New Orleans.",
-      "userId": 1,
-      "entryTypeId": 2,
-      "privacyTypeId": 1
     }
   ],
   "privacyTypes": [
@@ -180,23 +192,53 @@
   ],
   "friends": [
     {
-      "userId": 6,
-      "loggedInUserId": 1,
+      "userId": 2,
+      "loggedInUserId": 5,
       "id": 1
     },
     {
-      "userId": 9,
-      "loggedInUserId": 1,
-      "id": 7
+      "userId": 3,
+      "loggedInUserId": 5,
+      "id": 2
     },
     {
       "userId": 3,
       "loggedInUserId": 1,
+      "id": 3
+    },
+    {
+      "userId": 4,
+      "loggedInUserId": 1,
+      "id": 4
+    },
+    {
+      "userId": 1,
+      "loggedInUserId": 2,
+      "id": 5
+    },
+    {
+      "userId": 4,
+      "loggedInUserId": 2,
+      "id": 6
+    },
+    {
+      "userId": 1,
+      "loggedInUserId": 3,
+      "id": 7
+    },
+    {
+      "userId": 5,
+      "loggedInUserId": 3,
+      "id": 8
+    },
+    {
+      "userId": 2,
+      "loggedInUserId": 4,
       "id": 9
     },
     {
       "userId": 5,
-      "loggedInUserId": 1,
+      "loggedInUserId": 4,
       "id": 10
     }
   ]
