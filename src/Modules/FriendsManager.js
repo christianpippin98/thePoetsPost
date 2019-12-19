@@ -15,6 +15,9 @@ export default {
   getAllFriends(id) {
     return fetch(`${remoteURL}/friends${userSpecifics}${id}${expandUser}`).then(result => result.json())
   },
+  getFriend(sessionStorage, id) {
+    return fetch(`${remoteURL}/friends?loggedInUser=${sessionStorage}&userId=${id}`).then(result => result.json())
+  },
   delete(id) {
     return fetch(`${remoteURL}/friends/${id}`, {
       method: "DELETE"

@@ -10,7 +10,7 @@ class PersonalPostList extends Component {
 
 
     componentDidMount() {
-        const currentUser = JSON.parse(localStorage.getItem("credentials"))
+        const currentUser = JSON.parse(sessionStorage.getItem("credentials"))
         PostManager.getAllPersonalPosts(currentUser.id)
             .then((posts) => {
                 this.setState({

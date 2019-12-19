@@ -7,12 +7,14 @@ import { Button } from 'reactstrap';
 class LocalPostList extends Component {
     state = {
         posts: [],
+        userId: "",
+        loggedInUserId: "",
         friends: [],
     }
 
 
     componentDidMount() {
-        const loggedInUser = JSON.parse(localStorage.getItem("credentials"))
+        const loggedInUser = JSON.parse(sessionStorage.getItem("credentials"))
         PostManager.getAllLocalPosts()
             .then((posts) => {
                 this.setState({
@@ -41,16 +43,19 @@ class LocalPostList extends Component {
     }
 
 
-    deleteFriend = id => {
-        FriendsManager.delete(id)
+    unfollow = id => {
+        const currentUser = JSON.parse(sessionStorage.getItem("credentials"))
+        FriendsManager.getFriend(currentUser.id, id).then((response) => {
+            FriendsManager.delete(response[0].id)
             .then(() => {
-                FriendsManager.getAllGlobalFriends()
-                    .then((newFriends) => {
+                FriendsManager.getAllFriends(currentUser.id)
+                    .then((friends) => {
                         this.setState({
-                            friends: newFriends
+                            friends: friends
                         })
                     })
             })
+        })
     }
 
 
@@ -65,6 +70,7 @@ class LocalPostList extends Component {
                             key={post.id}
                             post={post}
                             friends={this.state.friends}
+                            unfollow={this.unfollow}
                             deletePost={this.deletePost}
                             {...this.props}
                         />

@@ -3,8 +3,6 @@ import NavBar from "./Nav/Navbar";
 import ApplicationViews from "./ApplicationViews";
 
 
-// localStorage.setItem("currentUser", 1)
-// let i = localStorage.getItem("currentUser", 1)
 
 class ThePoetsPost extends Component {
 
@@ -14,14 +12,14 @@ class ThePoetsPost extends Component {
 
   // Check if credentials are in local storage
   //returns true/false
-  isAuthenticated = () => localStorage.getItem("credentials") !== null
+  isAuthenticated = () => sessionStorage.getItem("credentials") !== null
 
   setUser = (authObj) => {
     /*
       For now, just store the email and password that
       the customer enters into local storage.
     */
-    localStorage.setItem(
+    sessionStorage.setItem(
       "credentials",
       JSON.stringify(authObj)
     )
@@ -31,8 +29,7 @@ class ThePoetsPost extends Component {
   }
 
   clearUser = () => {
-    // localStorage.clear()
-    localStorage.removeItem("credentials")
+    sessionStorage.removeItem("credentials")
 
     this.setState({ user: this.isAuthenticated() })
   }

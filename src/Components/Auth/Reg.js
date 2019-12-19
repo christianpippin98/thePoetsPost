@@ -44,7 +44,7 @@ class Reg extends Component {
             };
             UsersManager.post(user)
               .then((user) => {
-                localStorage.setItem(
+                sessionStorage.setItem(
                   "credentials",
                   JSON.stringify(user)
                 )
