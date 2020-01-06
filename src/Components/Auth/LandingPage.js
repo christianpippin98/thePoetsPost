@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import { Jumbotron, Button } from 'reactstrap';
 
+
 class LandingPage extends Component {
     render() {
         return (
             <div>
-                <Jumbotron>
+                <Jumbotron id="jumbotron">
                     <h1 className="display-3">Welcome To Poet's Post!</h1>
                     <p className="lead">A writer's creative and organizational inspiration!</p>
                     <hr className="my-2" />

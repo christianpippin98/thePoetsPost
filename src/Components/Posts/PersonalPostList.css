@@ -1,0 +1,15 @@
+#personalAddButton {
+    height: 75px;
+    width: 75px;
+    margin-left: 85%;
+    position: fixed;
+    bottom: 20px;
+    z-index: 1;
+    background-color: lightGrey;
+    border-radius: 50px;
+}
+
+#personalPostList {
+    margin-top: 75px;
+    margin-bottom: 115px;
+}

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import NavBar from "./Nav/Navbar";
 import ApplicationViews from "./ApplicationViews";
-
+import SimpleBottomNavigation from "./Nav/MaterialBottomNav"
 
 
 class ThePoetsPost extends Component {
@@ -44,8 +44,10 @@ class ThePoetsPost extends Component {
       <React.Fragment>
 
         <NavBar user={this.state.user} setUser={this.setUser} clearUser={this.clearUser} />
-        <ApplicationViews user={this.state.user}
+        <ApplicationViews style={{ zIndex: -1 }} user={this.state.user}
           setUser={this.setUser} />
+
+        <SimpleBottomNavigation />
       </React.Fragment>
     );
   }

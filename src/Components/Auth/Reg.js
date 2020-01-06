@@ -44,12 +44,13 @@ class Reg extends Component {
             };
             UsersManager.post(user)
               .then((user) => {
-                sessionStorage.setItem(
-                  "credentials",
-                  JSON.stringify(user)
-                )
-                window.location.reload(false)
-              })
+                // sessionStorage.setItem(
+            //   "credentials",
+            //   JSON.stringify(user)
+            //   )
+            this.props.setUser(user)
+            this.props.history.push("/globalpost")
+          })
           } else {
             window.alert("chill bruh, sign in")
           }

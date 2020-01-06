@@ -33,8 +33,9 @@ class Login extends Component {
             sessionStorage.setItem(
               "credentials",
               JSON.stringify(user)
-            )
-            window.location.reload(false)
+              )
+            // this.props.setUser(user)
+            // this.props.history.push("/globalpost")
           } else {
             alert("Fill Out Login Info Please")
           }

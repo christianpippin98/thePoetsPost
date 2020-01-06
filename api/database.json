@@ -34,32 +34,31 @@
       "firstName": "Jisie",
       "lastName": "David",
       "id": 5
+    },
+    {
+      "email": "philipnatha788@gmail.com",
+      "password": "safety123",
+      "firstName": "Philip",
+      "lastName": "Martin",
+      "id": 6
     }
   ],
   "posts": [
     {
-      "name": "A likable superhero.",
-      "body": "A cute mailman who is quickly spraying rather a lot of Febreze back in the good ol' days, and a blushing janitor who is obediently feeling a little hurt on the streets of Moscow, and a talkative Smurf who is wildly fetching coffee in first class on a trans-Atlantic flight, and a posh philosopher who is sheepishly opening a can of kidney beans at dawn, and a medicated Elvis impersonator who is humbly investing large amounts of cash in line at the DMV, and a disheveled Greek demigod who is emotionally taking the family dog for a walk in the basement.",
-      "privacyTypeId": 1,
-      "userId": 1,
-      "entryTypeId": 2,
-      "id": 1
-    },
-    {
+      "id": 2,
       "name": "A vegan politician.",
       "body": "A pale Oompa Loompa who is anxiously telling a joke every couple of hours, and an outgoing bank robber who is carelessly reading mean Tweets in the Apple store.",
-      "privacyTypeId": 2,
       "userId": 1,
       "entryTypeId": 1,
-      "id": 2
+      "privacyTypeId": 1
     },
     {
-      "name": "A calm grandma.",
+      "id": 3,
+      "name": "A cranky grandma.",
       "body": "A diseased soccer mom who is confusedly wrapping a Chanukah present beneath the Eiffel Tower, and a troublesome dictator who is discreetly being made miserable in plain sight.",
-      "privacyTypeId": 3,
       "userId": 1,
-      "entryTypeId": 3,
-      "id": 3
+      "entryTypeId": 1,
+      "privacyTypeId": 1
     },
     {
       "name": "Suspiciously writing a poem.",
@@ -70,20 +69,12 @@
       "id": 4
     },
     {
-      "name": "Willfully discovering a new world.",
-      "body": "Aggressively reading Miranda rights on a deserted island, and a clever stormtrooper who is nervously dueling on a busy Monday, and a clever monk who is skeptically out to lunch on the Moon.",
-      "privacyTypeId": 2,
-      "userId": 2,
-      "entryTypeId": 1,
-      "id": 5
-    },
-    {
+      "id": 6,
       "name": "Slowly in a shouting match.",
       "body": "Wisely throwing stones all night long, and a classy tap-dancer who is excitedly stealing on a busy Monday, and a fishy calligraphy enthusiast.",
-      "privacyTypeId": 3,
       "userId": 2,
       "entryTypeId": 2,
-      "id": 6
+      "privacyTypeId": 1
     },
     {
       "name": "A millionaire.",
@@ -164,6 +155,14 @@
       "userId": 1,
       "entryTypeId": 2,
       "id": 16
+    },
+    {
+      "name": "A teenager.",
+      "body": "A monk who is zestfully riding a mule on the tip of an iceberg, and a classy and likable cross-dresser who is skeptically delivering pizza in a swamp near New Orleans.\n\n",
+      "privacyTypeId": 2,
+      "userId": 1,
+      "entryTypeId": 2,
+      "id": 17
     }
   ],
   "privacyTypes": [
@@ -200,19 +199,9 @@
   ],
   "friends": [
     {
-      "userId": 2,
-      "loggedInUserId": 5,
-      "id": 1
-    },
-    {
       "userId": 4,
       "loggedInUserId": 1,
       "id": 4
-    },
-    {
-      "userId": 1,
-      "loggedInUserId": 2,
-      "id": 5
     },
     {
       "userId": 4,
@@ -230,11 +219,6 @@
       "id": 8
     },
     {
-      "userId": 2,
-      "loggedInUserId": 4,
-      "id": 9
-    },
-    {
       "userId": 5,
       "loggedInUserId": 4,
       "id": 10
@@ -243,6 +227,26 @@
       "userId": 3,
       "loggedInUserId": 1,
       "id": 11
+    },
+    {
+      "userId": 1,
+      "loggedInUserId": 6,
+      "id": 12
+    },
+    {
+      "userId": 3,
+      "loggedInUserId": 6,
+      "id": 13
+    },
+    {
+      "userId": 2,
+      "loggedInUserId": 1,
+      "id": 15
+    },
+    {
+      "userId": 5,
+      "loggedInUserId": 1,
+      "id": 16
     }
   ]
 }

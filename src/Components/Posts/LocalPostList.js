@@ -2,7 +2,8 @@ import React, { Component } from "react"
 import PostCard from "./PostCard"
 import PostManager from "../../Modules/PostManager"
 import FriendsManager from "../../Modules/FriendsManager"
-import { Button } from 'reactstrap';
+import AddCircleTwoToneIcon from '@material-ui/icons/AddCircleTwoTone';
+import "./LocalPostList.css"
 
 class LocalPostList extends Component {
     state = {
@@ -75,8 +76,8 @@ class LocalPostList extends Component {
     render() {
         return (
             <>
-                <Button color="secondary" size="sm" onClick={() => { this.props.history.push("/localpost/new") }}>New Post</Button>
-                <div className="container-cards">
+                <AddCircleTwoToneIcon id="localAddButton" size="sm" onClick={() => { this.props.history.push("/localpost/new") }}></AddCircleTwoToneIcon>
+                <div id="localPostList" className="container-cards">
                     {this.state.posts.map(post =>
                         <PostCard
                             user={post.userId}

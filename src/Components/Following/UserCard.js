@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import { Card, Button, CardTitle, CardText } from 'reactstrap';
+import { Card, CardTitle, CardText } from 'reactstrap';
 import FriendsManager from '../../Modules/FriendsManager';
-
+import PersonAddDisabledTwoToneIcon from '@material-ui/icons/PersonAddDisabledTwoTone';
 
 
 class UserCard extends Component {
@@ -27,10 +27,9 @@ class UserCard extends Component {
     render() {
         return (
             <>
-                <Card body inverse style={{ backgroundColor: '#333', borderColor: '#333' }}>
+                <Card id="userCard">
                     <CardTitle>{this.props.friend.user.firstName} {this.props.friend.user.lastName}</CardTitle>
-                    <CardText></CardText>
-                    <Button size="sm" type="button" onClick={() => this.props.unfollow(this.props.friend.user.id)}>Unfollow</Button>
+                    <PersonAddDisabledTwoToneIcon size="sm" onClick={() => this.props.unfollow(this.props.friend.user.id)}></PersonAddDisabledTwoToneIcon>
                 </Card>
             </>
         )
