@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import PostManager from "../../Modules/PostManager"
 import { CustomInput, Form, FormGroup, Button, Input } from 'reactstrap';
+import "./PostForm.css"
 
 class PostEditForm extends Component {
   //set the initial state
@@ -67,7 +68,7 @@ class PostEditForm extends Component {
   render() {
     return (
       <>
-        <Form>
+        <Form id="formCard">
           <FormGroup>
             <Input type="text" onChange={this.handleFieldChange} name="text" id="name" placeholder="Entry Name" value={this.state.name} />
           </FormGroup>

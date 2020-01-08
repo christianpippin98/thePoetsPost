@@ -44,8 +44,10 @@ class ThePoetsPost extends Component {
       <React.Fragment>
 
         <NavBar user={this.state.user} setUser={this.setUser} clearUser={this.clearUser} />
-        <ApplicationViews user={this.state.user}
+        <ApplicationViews style={{ zIndex: -1 }} user={this.state.user}
           setUser={this.setUser} />
+
+        
       </React.Fragment>
     );
   }

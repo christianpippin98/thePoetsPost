@@ -2,7 +2,11 @@ import React, { Component } from "react"
 import PostCard from "./PostCard"
 import PostManager from "../../Modules/PostManager"
 import FriendsManager from "../../Modules/FriendsManager"
-import { Button } from 'reactstrap';
+import AddCircleTwoToneIcon from '@material-ui/icons/AddCircleTwoTone';
+import "./GlobalPostList.css"
+import SimpleBottomNavigation from '../Nav/MaterialBottomNav'
+
+
 
 class GlobalPostList extends Component {
     state = {
@@ -65,14 +69,14 @@ class GlobalPostList extends Component {
         const currentUser = JSON.parse(sessionStorage.getItem("credentials"))
         FriendsManager.getFriend(currentUser.id, id).then((response) => {
             FriendsManager.delete(response[0].id)
-            .then(() => {
-                FriendsManager.getAllFriends(currentUser.id)
-                    .then((friends) => {
-                        this.setState({
-                            friends: friends
+                .then(() => {
+                    FriendsManager.getAllFriends(currentUser.id)
+                        .then((friends) => {
+                            this.setState({
+                                friends: friends
+                            })
                         })
-                    })
-            })
+                })
         })
     }
 
@@ -80,9 +84,11 @@ class GlobalPostList extends Component {
     render() {
         return (
             <>
-                <Button color="secondary" size="sm" onClick={() => { this.props.history.push("/globalpost/new") }}>New Post</Button>
-                <div className="container-cards">
+            <AddCircleTwoToneIcon id="globalAddButton" size="sm" onClick={() => { this.props.history.push("/globalpost/new") }}></AddCircleTwoToneIcon>
+                <div id="globalPostList" className="container-cards">
+            <h2 id="globalTitle">Global</h2>
                     {this.state.posts.map(post =>
+                    <>
                         <PostCard
                             user={post.userId}
                             key={post.id}
@@ -93,6 +99,8 @@ class GlobalPostList extends Component {
                             unfollow={this.unfollow}
                             {...this.props}
                         />
+                        <SimpleBottomNavigation />
+                        </>
                     )}
                 </div>
             </>

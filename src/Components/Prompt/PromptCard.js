@@ -39,7 +39,7 @@ class PromptCard extends Component {
         const {cSelected}=this.state
         return (
             <div>
-                <Jumbotron fluid>
+                <Jumbotron id="formCard" fluid>
                     <Container fluid>
                         {this.state.prompt.english ?
                             <p>{this.state.prompt.english}</p> : <><h3>Loading</h3></>

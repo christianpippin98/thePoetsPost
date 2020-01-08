@@ -1,0 +1,24 @@
+Link {
+    color: white;
+}
+
+#dropdownFollowing, #dropdownProfile, #dropdownLogout {
+    color: black;
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 75px;
+    background-color: lightgray;
+}
+
+#navTitle, #navUserName {
+    color: black;
+}
+
+#navTitle {
+    font-weight: bolder;
+}

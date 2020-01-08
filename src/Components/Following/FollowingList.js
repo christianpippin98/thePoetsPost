@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import UserCard from "./UserCard"
 import FriendsManager from "../../Modules/FriendsManager"
+import "./FollowingList.css"
 
 class FollowingList extends Component {
     state = {
@@ -43,7 +44,7 @@ class FollowingList extends Component {
     render() {
         return (
             <>
-                <div className="container-cards">
+                <div id="followingList" className="container-cards">
                     {this.state.friends.map(friend =>
                         <UserCard
                         user={friend.userId}
