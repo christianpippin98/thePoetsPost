@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import PostManager from "../../Modules/PostManager";
 import PromptCard from "../Prompt/PromptCard"
 import { CustomInput, Form, FormGroup, Button, Input } from 'reactstrap';
+import "./PostForm.css"
 
 
 class PostForm extends Component {
@@ -68,7 +69,7 @@ class PostForm extends Component {
     render() {
         return (
             <>
-                <PromptCard />
+                <PromptCard id="formCard"/>
                 <Form>
                     <FormGroup>
                         <Input type="text" onChange={this.handleFieldChange} name="text" id="name" placeholder="Entry Name" required />

@@ -3,6 +3,7 @@ import PostCard from "./PostCard"
 import PostManager from "../../Modules/PostManager"
 import FriendsManager from "../../Modules/FriendsManager"
 import AddCircleTwoToneIcon from '@material-ui/icons/AddCircleTwoTone';
+import SimpleBottomNavigation from '../Nav/MaterialBottomNav'
 import "./LocalPostList.css"
 
 class LocalPostList extends Component {
@@ -78,7 +79,9 @@ class LocalPostList extends Component {
             <>
                 <AddCircleTwoToneIcon id="localAddButton" size="sm" onClick={() => { this.props.history.push("/localpost/new") }}></AddCircleTwoToneIcon>
                 <div id="localPostList" className="container-cards">
+                <h2 id="localTitle">Local</h2>
                     {this.state.posts.map(post =>
+                    <>
                         <PostCard
                             user={post.userId}
                             key={post.id}
@@ -88,6 +91,8 @@ class LocalPostList extends Component {
                             deletePost={this.deletePost}
                             {...this.props}
                         />
+                        <SimpleBottomNavigation />
+                        </>
                     )}
                 </div>
             </>

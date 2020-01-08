@@ -39,9 +39,9 @@ export default function SimpleBottomNavigation() {
                     showLabels
                     className={classes.root}
                 >
-                    <BottomNavigationAction component={Link} to="/globalpost" label="Global" icon={< PublicTwoToneIcon />} />
-                    <BottomNavigationAction component={Link} to="/localpost" label="Local" icon={< LocationCityTwoToneIcon />} />
-                    <BottomNavigationAction component={Link} to="/mypost" label="Personal" icon={<HomeTwoToneIcon />} />
+                    <BottomNavigationAction id="globalNavSelection" component={Link} to="/globalpost" label="Global" icon={< PublicTwoToneIcon />} />
+                    <BottomNavigationAction id="localNavSelection" component={Link} to="/localpost" label="Local" icon={< LocationCityTwoToneIcon />} />
+                    <BottomNavigationAction id="personalNavSelection" component={Link} to="/mypost" label="Personal" icon={<HomeTwoToneIcon />} />
                 </BottomNavigation>
 
     );

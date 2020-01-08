@@ -61,12 +61,12 @@
       "privacyTypeId": 1
     },
     {
+      "id": 4,
       "name": "Suspiciously writing a poem.",
       "body": "Delicately driving a bulldozer under the unsleeping Eye of Sauron, and a corrupt superhero who is carelessly jogging in a field of goats, and enthusiastically relaxing on a boat, and a blushing ninja warrior who is sensitively doing the Hokey-Pokey during a flood.",
-      "privacyTypeId": 1,
       "userId": 2,
       "entryTypeId": 4,
-      "id": 4
+      "privacyTypeId": 1
     },
     {
       "id": 6,
@@ -149,12 +149,12 @@
       "id": 15
     },
     {
-      "name": "A trial lawyer.",
+      "id": 16,
+      "name": "A builder.",
       "body": "A robot who is defiantly co-piloting a jumbo jet in a burning building, and a tactless hobbit who is optimistically playing \"doctor\" with a pale Greek demigod in Carnegie Hall.",
-      "privacyTypeId": 3,
       "userId": 1,
       "entryTypeId": 2,
-      "id": 16
+      "privacyTypeId": 3
     },
     {
       "name": "A teenager.",
@@ -163,6 +163,14 @@
       "userId": 1,
       "entryTypeId": 2,
       "id": 17
+    },
+    {
+      "name": "An undercover cop who is awkwardly feeling a little hurt.",
+      "body": "A chef who is tiredly getting jiggy beneath the desert sky, and a hairy stormtrooper who is bravely picking a pocket in the McDonald's drive-thru, and an actor.",
+      "privacyTypeId": 1,
+      "userId": 1,
+      "entryTypeId": 1,
+      "id": 18
     }
   ],
   "privacyTypes": [
@@ -214,29 +222,9 @@
       "id": 7
     },
     {
-      "userId": 5,
-      "loggedInUserId": 3,
-      "id": 8
-    },
-    {
-      "userId": 5,
-      "loggedInUserId": 4,
-      "id": 10
-    },
-    {
-      "userId": 3,
-      "loggedInUserId": 1,
-      "id": 11
-    },
-    {
       "userId": 1,
       "loggedInUserId": 6,
       "id": 12
-    },
-    {
-      "userId": 3,
-      "loggedInUserId": 6,
-      "id": 13
     },
     {
       "userId": 2,
@@ -246,7 +234,7 @@
     {
       "userId": 5,
       "loggedInUserId": 1,
-      "id": 16
+      "id": 20
     }
   ]
 }

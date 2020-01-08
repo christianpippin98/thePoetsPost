@@ -4,6 +4,8 @@ import PostManager from "../../Modules/PostManager"
 import FriendsManager from "../../Modules/FriendsManager"
 import AddCircleTwoToneIcon from '@material-ui/icons/AddCircleTwoTone';
 import "./GlobalPostList.css"
+import SimpleBottomNavigation from '../Nav/MaterialBottomNav'
+
 
 
 class GlobalPostList extends Component {
@@ -84,7 +86,9 @@ class GlobalPostList extends Component {
             <>
             <AddCircleTwoToneIcon id="globalAddButton" size="sm" onClick={() => { this.props.history.push("/globalpost/new") }}></AddCircleTwoToneIcon>
                 <div id="globalPostList" className="container-cards">
+            <h2 id="globalTitle">Global</h2>
                     {this.state.posts.map(post =>
+                    <>
                         <PostCard
                             user={post.userId}
                             key={post.id}
@@ -95,6 +99,8 @@ class GlobalPostList extends Component {
                             unfollow={this.unfollow}
                             {...this.props}
                         />
+                        <SimpleBottomNavigation />
+                        </>
                     )}
                 </div>
             </>

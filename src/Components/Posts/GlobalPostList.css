@@ -13,3 +13,13 @@
     margin-top: 75px;
     margin-bottom: 115px;
 }
+
+#globalNavSelection, #localNavSelection, #personalNavSelection {
+    color: #333;
+}
+
+#globalTitle {
+    margin-left: 20px;
+    margin-top: 90px;
+    margin-bottom: 20px;
+}
