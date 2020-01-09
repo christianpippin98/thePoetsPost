@@ -16,7 +16,7 @@ Poet's Post is designed as a social application for all types of writers ranging
 
 ### Future plans for Poet's Post?
 
-While Poet's Post is already a great app, there is a lot in the works for version 2 and beyond.
+While Poet's Post is already a great app, there is a lot in the works for v.2.0 and beyond.
 Eventually, users will be able to search and read thier favorite poems by all the most renowned poets. Users will also be able to send direct messages to each other and communicate privately. If a user would like to discontinue communication and viewership of another user, they will have the ability to block that individual. A user can save thier favorite poems and poets to thier favorites page. Users will be able to collaborate on projects. Users will be able to start creative writing groups and have writing events focused on specific prompts for the entire group, in order to better understand the creative processes of thier friends.
 
 These are only a few features planned for Poet's Post in the near future, and I am really excited to see where this apps potential can take it!
